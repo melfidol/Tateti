@@ -33,3 +33,25 @@ h1, h2{
     height: 200px;
     max-width: 33.33%;
 }
+
+.menudesplegable {
+    height: 100%; 
+    width: 150px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0; 
+    background-color: black; 
+    overflow-x: hidden;
+    padding-top: 60px; 
+    transition: 0.5s;
+}
+
+.menudesplegable a {
+    position: absolute; 
+    top: 0; 
+    right: 25px;
+    font-size: 
+    36px; margin-left:
+    50px;
+}
