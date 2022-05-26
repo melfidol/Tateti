@@ -11,6 +11,7 @@ h1, h2{
 
 #textoGanador{
     /*visibility: hidden;*/
+    font-size: 3em;
 
 }
 
@@ -47,11 +48,24 @@ h1, h2{
     transition: 0.5s;
 }
 
-.menudesplegable a {
+.menudesplegable ul {
     position: absolute; 
-    top: 0; 
-    right: 25px;
-    font-size: 
-    36px; margin-left:
-    50px;
+    top: 0px;
+    width: 100%;
+    display: block;
+}
+
+.menudesplegable li {
+    padding-top: 10px;
+    width: 100%;
+}
+
+.menudesplegable a {
+    font-size: 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.menudesplegable li :hover {
+    background-color: grey;
 }
