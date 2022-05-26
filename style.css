@@ -1,17 +1,19 @@
 body{
     Background-color: rgb(12, 12, 112);
     color: white;
-    font-family:'Press Start 2p'
+    
 }
 
 h1, h2{
     text-align: center;
     font-size: 3em;
+    font-family: 'Press Start 2P';
 }
 
 #textoGanador{
     /*visibility: hidden;*/
     font-size: 3em;
+    color:rgb(196, 69, 154);
 
 }
 
