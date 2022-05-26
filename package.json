@@ -1,0 +1,9 @@
+{
+  "name": "tateti",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^19.0.1"
+  }
+}

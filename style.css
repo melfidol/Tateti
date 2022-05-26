@@ -58,6 +58,7 @@ h1, h2{
 .menudesplegable li {
     padding-top: 10px;
     width: 100%;
+    list-style-type: none;
 }
 
 .menudesplegable a {
