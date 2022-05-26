@@ -1,5 +1,6 @@
 {
   "name": "tateti",
+  "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
