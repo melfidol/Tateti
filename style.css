@@ -1,7 +1,7 @@
 body{
     Background-color: rgb(12, 12, 112);
     color: white;
-    
+    margin: 0%;
 }
 
 h1, h2{
@@ -40,19 +40,15 @@ h1, h2{
 .menudesplegable {
     height: 100%; 
     width: 150px; 
-    position: fixed; 
-    z-index: 1; 
-    top: 0; 
+    position: absolute; 
     left: 0; 
     background-color: black; 
     overflow-x: hidden;
-    padding-top: 60px; 
     transition: 0.5s;
 }
 
 .menudesplegable ul {
     position: absolute; 
-    top: 0px;
     width: 100%;
     display: block;
 }
@@ -71,4 +67,35 @@ h1, h2{
 
 .menudesplegable li :hover {
     background-color: grey;
+}
+
+#barra {
+    display: block;
+    position: fixed;
+    overflow: hidden;
+
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background-color: black;
+
+}
+
+
+#titulobarra {
+
+}
+
+#botones {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    margin: 0px;
+}
+
+
+.botonbarra {
+    background-color: black;
+    height: 100%;
 }
