@@ -6,5 +6,8 @@
   },
   "devDependencies": {
     "electron": "^19.0.1"
+  },
+  "dependencies": {
+    "electron-reloader": "^1.2.3"
   }
 }
