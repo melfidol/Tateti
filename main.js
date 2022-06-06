@@ -1,6 +1,10 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
+
+try {
+  require('electron-reloader')(module)
+} catch (_) {}
 
 function createWindow () {
   // Create the browser window.

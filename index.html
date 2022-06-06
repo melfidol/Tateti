@@ -7,7 +7,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script src='main.js'></script>
-    <script src="./renderer.js"></script>
+    <script defer src="funciones/index.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -15,12 +16,12 @@
 <body>
     
     <div id="barra">
-        <button id="botonmenu" class="botonbarra"></button>
-        <h3 id="titulobarra">Ta Te Ti</h3>
+        <button id="botonMenu"></button>
+        <div id="titulobarra">Ta Te Ti</div>
         <div id="botones">
-            <button id="botonminim" class="botonbarra"></button>
-            <button id="botonachicar" class="botonbarra"></button>
-            <button id="botoncerrar" class="botonbarra"></button>
+            <button id="botonMin" class="botonBarra"></button>
+            <button id="botonMax" class="botonBarra"></button>
+            <button id="botonCerrar" class="botonBarra"></button>
         </div>
         
     </div>
@@ -34,7 +35,7 @@
 
         <div id="menu" class="menudesplegable"> 
             <ul>
-                <li><a href="javascript:void(0)">botonxd</a></li>
+                <li><button id="botonCerrarMenu"></button></li>
                 <li><a href="#">Reiniciar Partida</a></li>
                 <li><a href="#">Nueva Partida</a></li>
                 <li><a href="#">Salir del juego</a></li>
@@ -42,18 +43,20 @@
             </ul>
             
         </div>
+
         <h1> Tablero gg</h1>
         <h2 id="textoGanador"> Jugador 1 Ha ganado</h2>
+
         <div id="tablero">
-            <button> </button>
-            <button> </button>
-            <button> </button>
-            <button> </button>
-            <button> </button>
-            <button> </button>
-            <button> </button>
-            <button> </button>
-            <button> </button>
+            <button class="Tbutton"> </button>
+            <button class="Tbutton"> </button>
+            <button class="Tbutton"> </button>
+            <button class="Tbutton"> </button>
+            <button class="Tbutton"> </button>
+            <button class="Tbutton"> </button>
+            <button class="Tbutton"> </button>
+            <button class="Tbutton"> </button>
+            <button class="Tbutton"> </button>
         </div>
     </div>
     
@@ -69,6 +72,6 @@
     
     
 
-    <span onclick="openNav()">open</span>
+    <!-- <span onclick="openNav()">open</span> -->
 </body>
 </html>
