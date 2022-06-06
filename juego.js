@@ -1,3 +1,4 @@
+/*
 let turno = 1;
 let fichas = ["O" , "X"];
 let puestas = 0;
@@ -34,7 +35,7 @@ function ponerFicha(event){
 }
 
 
-
+*/
 
 
 
