@@ -58,9 +58,18 @@ function createWindow () {
     else mainWindow.maximize()
   })
 
+  //FOCUS Y BLUR
+  mainWindow.on("focus", () => {
+    mainWindow.webContents.send("isFocus")
+  })
+  mainWindow.on("blur", () => {
+    mainWindow.webContents.send("isInactive")
+  })
+}
+
   
 
-}
+
 
 
 // This method will be called when Electron has finished
