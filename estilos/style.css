@@ -1,0 +1,155 @@
+body{
+    Background-color: #040814;
+    color: white;
+    margin: 0%;
+    padding-top: 30px;
+}
+
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  *::-webkit-scrollbar:vertical {
+    width: 0px;
+  }
+
+h1, h2{
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Press Start 2P';
+}
+
+.textoGanador{
+    /*visibility: hidden;*/
+    font-size: 3em;
+    color:rgb(196, 69, 154);
+
+}
+
+#aplicacion{
+    width: 100%;
+    height: 100%;
+
+}
+
+.tablero{
+    margin: auto;
+    width: 510px;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tablero>button{
+    width: 170px;
+    height: 170px;
+    max-width: 33.33%;
+}
+
+.menudesplegable {
+    height: 100%; 
+    width: 200px; 
+    position: absolute; 
+    left: 0; 
+    background-color: black; 
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.menudesplegable ul {
+    position: absolute; 
+    left: -15px;
+    width: 100%;
+    display: block;
+}
+
+.menudesplegable li {
+    padding-top: 10px;
+    width: 100%;
+    list-style-type: none;
+}
+
+.menudesplegable a {
+    font-size: 9px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-family: 'Press Start 2P';
+
+}
+
+.menudesplegable li :hover {
+    background-color: grey;
+}
+
+
+
+#botonCerrarMenu {
+    width: 20px;
+    height: 20px;
+    border: 0px;
+    background-color: rgb(0, 0, 0);
+}
+
+#barra {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: #212A5E;
+}
+
+
+#titulobarra {
+
+    font-size: 1em;
+    font-family: 'Press Start 2P';
+    left: 40px;
+    position: absolute;
+}
+
+#botones{
+    padding-right: 10px;
+}
+
+
+.botonBarra{
+    width: 25px;
+    height: 25px;
+    border: 0px;
+    color: aliceblue;
+    background-color: #040814;
+    border-radius: 5px;
+
+}
+
+#botonMin {
+    /* background-image: ; */
+    background-size: contain;
+}
+
+#botonMax {
+    /* background-image: ; */
+    background-size: contain;
+}
+
+#botonCerrar {
+    /* background-image: ; */
+    background-size: contain;
+}
+
+
+#botonMenu {
+    /* background-image: ; */
+    width: 25px;
+    height: 25px;
+    border: 0px;
+    background-size: contain;
+    background-color: #040814;
+    color: aliceblue;
+}
