@@ -2,9 +2,12 @@
 const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 
-try {
-  require('electron-reloader')(module)
-} catch (_) {}
+const path = require('path')
+
+require('electron-reload')(__dirname, {
+  electron: path.join(__dirname, 'node_modules', '.bin', 'electron'),
+  hardResetMethod: 'exit'
+});
 
 function createWindow () {
   // Create the browser window.
