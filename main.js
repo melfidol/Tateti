@@ -17,7 +17,7 @@ function createWindow () {
     webPreferences: {
         nodeIntegration: true, 
         contextIsolation: false, //para poder personalizar la barra
-        devTools: false //define si se puede abrir o no el inspeccionar
+        devTools: true //define si se puede abrir o no el inspeccionar
       // preload: path.join(__dirname, 'preload.js')
     }
   })
