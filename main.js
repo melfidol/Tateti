@@ -13,8 +13,10 @@ function createWindow () {
     height: 600,
     frame: false,
     
+    
     //transparent: true, //saca el background default
     webPreferences: {
+        
         nodeIntegration: true, 
         contextIsolation: false, //para poder personalizar la barra
         devTools: true //define si se puede abrir o no el inspeccionar
@@ -25,9 +27,38 @@ function createWindow () {
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
 
+
+
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
+
+  //EVENTO minimizar
+  ipcMain.on("minimize", () => {
+    mainWindow.minimize()
+  })
+
+  //EVENTO CERRAR
+  ipcMain.on("close", () => {
+    mainWindow.close()
+  } )
+
+  mainWindow.on("maximize", () => {
+    mainWindow.webContents.send("isMaximized")
+  })
+
+  mainWindow.on("unmaximize", () => {
+    mainWindow.webContents.send("isRestored")
+  })
+
+  ipcMain.on('maximizeRestoreApp', () => {
+    if (mainWindow.isMaximized()) mainWindow.unmaximize()
+    else mainWindow.maximize()
+  })
+
+  
+
 }
+
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
@@ -51,3 +82,5 @@ app.on('window-all-closed', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+
