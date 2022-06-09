@@ -129,17 +129,17 @@ h1, h2{
 }
 
 #botonMin {
-    /* background-image: ; */
+    background-image: url('../src/icon_minimize.png');
     background-size: contain;
 }
 
 #botonMax {
-    /* background-image: ; */
-    background-size: contain;
+background-image: url('../src/icon_maximize.png');
+background-size: contain;
 }
 
 #botonCerrar {
-    /* background-image: ; */
+    background-image: url('../src/icon_close.png');
     background-size: contain;
 }
 
