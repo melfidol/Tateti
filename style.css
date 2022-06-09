@@ -10,7 +10,7 @@ h1, h2{
     font-family: 'Press Start 2P';
 }
 
-#textoGanador{
+.textoGanador{
     /*visibility: hidden;*/
     font-size: 3em;
     color:rgb(196, 69, 154);
@@ -23,7 +23,7 @@ h1, h2{
 
 }
 
-#tablero{
+.tablero{
     margin: auto;
     width: 600px;
     max-width: 100%;
@@ -31,7 +31,7 @@ h1, h2{
     flex-wrap: wrap;
 }
 
-#tablero>button{
+.tablero>button{
     width: 200px;
     height: 200px;
     max-width: 33.33%;
