@@ -45,7 +45,7 @@ function ponerFicha(event){
 
 
 // ==================== CONSTANTS ==================== //
-const STATUS_DISPLAY = document.querySelector("textoGanador"),
+const STATUS_DISPLAY = document.querySelector(".textoGanador"),
   GAME_STATE = ["", "", "", "", "", "", "", "", ""],
   WINNINGS = [
     [0, 1, 2],
@@ -73,8 +73,10 @@ function main() {
 }
 
 function listeners() {
-  document.querySelector('tablero').addEventListener('click', handleButtonClick)
-  document.querySelector('.game-restart').addEventListener('click', handleRestartGame)
+  document.querySelector('.tablero').addEventListener('click', handleButtonClick)
+  document.querySelector('.restartGame').addEventListener('click', handleRestartGame)
+  document.querySelector('.newGame').addEventListener('click', handleNewGame)
+  document.querySelector('.quitGame').addEventListener('click', handleQuitGame)
 }
 
 function handleStatusDisplay(message) {
@@ -86,12 +88,28 @@ function handleRestartGame() {
   currentPlayer = "X"
   restartGameState()
   handleStatusDisplay(CURRENT_PLAYER_TURN())
-  document.querySelectorAll('.Tbutton').forEach(cell => cell.innerHTML = "")
+  document.querySelectorAll('.Tbutton').forEach(button => button.innerHTML = "")
+}
+
+function handleNewGame() {
+  gameActive = true
+  currentPlayer = "X"
+  restartGameState()
+  handleStatusDisplay(CURRENT_PLAYER_TURN())
+  document.querySelectorAll('.Tbutton').forEach(button => button.innerHTML = "")
+}
+
+function handleQuitGame() {
+  gameActive = true
+  currentPlayer = "X"
+  restartGameState()
+  handleStatusDisplay(CURRENT_PLAYER_TURN())
+  document.querySelectorAll('.Tbutton').forEach(button => button.innerHTML = "")
 }
 
 function handleButtonClick(clickedButtonEvent /** Type Event **/) {
   const clickedButton = clickedButtonEvent.target
-  if (clickedButton.classList.contains('Tbutton')) {
+  if (clickedButton.classList.contains('.Tbutton')) {
     const clickedButtonIndex = Array.from(clickedButton.parentNode.children).indexOf(clickedButton)
     if (GAME_STATE[clickedButtonIndex] !== '' || !gameActive) {
       return false
