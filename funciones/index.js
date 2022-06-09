@@ -1,7 +1,7 @@
 const { ipcRenderer } = require("electron")
 
 const botonMin = document.getElementById("botonMin")
-const botonMaxRestore = document.getElementById("botonMaxRestore")
+const botonMaxRestore = document.getElementById("botonMax")
 const botonCerrar = document.getElementById("botonCerrar")
 
 //ESCUCHA MINIMIZAR, sendea mensaje para que le main lo ejecute
