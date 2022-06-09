@@ -2,8 +2,6 @@
 const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 
-const path = require('path')
-
 require('electron-reload')(__dirname, {
   electron: path.join(__dirname, 'node_modules', '.bin', 'electron'),
   hardResetMethod: 'exit'
