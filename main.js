@@ -12,6 +12,8 @@ function createWindow () {
     width: 800,
     height: 600,
     frame: false,
+    minWidth: 530,
+    minHeight: 600, 
     
     
     //transparent: true, //saca el background default
