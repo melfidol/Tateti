@@ -3,6 +3,7 @@ const { ipcRenderer } = require("electron")
 const botonMin = document.getElementById("botonMin")
 const botonMaxRestore = document.getElementById("botonMax")
 const botonCerrar = document.getElementById("botonCerrar")
+const body = document.querySelector("body")
 
 //ESCUCHA MINIMIZAR, sendea mensaje para que le main lo ejecute
 botonMin.addEventListener("click", () => {
@@ -51,8 +52,11 @@ changeMaxResBtn(false)
 function changeColorFocus(isFocus) {
 if (isFocus) {
     barra.style.backgroundColor = '#212A5E'
+    body.style.filter = "blur(0px)"
+
 } else {
     barra.style.backgroundColor = '#3a3f5d'
+    body.style.filter = "blur(5px)"
 }
 }
 
