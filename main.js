@@ -2,7 +2,6 @@
 const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 
-
 require('electron-reload')(__dirname, {
   electron: path.join(__dirname, 'node_modules', '.bin', 'electron'),
   hardResetMethod: 'exit'
@@ -14,6 +13,8 @@ function createWindow () {
     width: 800,
     height: 600,
     frame: false,
+    minWidth: 530,
+    minHeight: 600, 
     
     
     //transparent: true, //saca el background default
