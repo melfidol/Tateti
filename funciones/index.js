@@ -9,19 +9,23 @@ botonMin.addEventListener("click", () => {
     ipcRenderer.send("minimize")
 })
 
-//no anda gg
-botonMaxRestore.addEventListener("click", () => {
-    
-    if(mainWindow.ismaximized()) ipcRenderer.send("unmaximize")
-    else ipcRenderer.send("maximize")
-})
-
 //ESCUCHA CERRAR
 botonCerrar.addEventListener("click", () => {
     ipcRenderer.send("close")
 })
 
+//Maximizar y restorear
+botonMaxRestore.addEventListener("click", () => {
+    ipcRenderer.send("maximizeRestoreApp")
+})
 
+ipcRenderer.on("isRestored", () => {
+    ipcRenderer.send("maximize")
+})
+
+ipcRenderer.on("isMaximized", () => {
+    ipcRenderer.send("unmaximize")
+})
 
 
 
