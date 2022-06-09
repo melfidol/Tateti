@@ -135,7 +135,7 @@ h1, h2{
 
 #botonMax {
 background-image: url('../src/icon_maximize.png');
-background-size: contain;
+background-size: cover;
 }
 
 #botonCerrar {
