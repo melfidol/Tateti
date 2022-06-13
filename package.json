@@ -8,6 +8,6 @@
     "electron": "^19.0.1"
   },
   "dependencies": {
-    "electron-reloader": "^1.2.3"
+    "electron-reload": "^2.0.0-alpha.1"
   }
 }

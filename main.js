@@ -2,9 +2,10 @@
 const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 
-try {
-  require('electron-reloader')(module)
-} catch (_) {}
+require('electron-reload')(__dirname, {
+  electron: path.join(__dirname, 'node_modules', '.bin', 'electron'),
+  hardResetMethod: 'exit'
+});
 
 function createWindow () {
   // Create the browser window.
@@ -12,6 +13,8 @@ function createWindow () {
     width: 800,
     height: 600,
     frame: false,
+    minWidth: 530,
+    minHeight: 600, 
     
     
     //transparent: true, //saca el background default
@@ -25,7 +28,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('lol.html')
 
 
 
@@ -55,9 +58,18 @@ function createWindow () {
     else mainWindow.maximize()
   })
 
+  //FOCUS Y BLUR
+  mainWindow.on("focus", () => {
+    mainWindow.webContents.send("isFocus")
+  })
+  mainWindow.on("blur", () => {
+    mainWindow.webContents.send("isInactive")
+  })
+}
+
   
 
-}
+
 
 
 // This method will be called when Electron has finished
