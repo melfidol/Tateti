@@ -27,12 +27,24 @@ fetch('./nav.html')
     botonMin.addEventListener('click', () => {
         ipcRenderer.send('minimize')
       })
-      botonMaxRestore.addEventListener('click', () => {
-        ipcRenderer.send('maximize')
-      })
+      
       botonCerrar.addEventListener('click', () => {
         ipcRenderer.send('close')
       })
+
+      botonMaxRestore.addEventListener('click', () => {
+        ipcRenderer.send('maximizeRestoreApp')
+      })
+
+      ipcRenderer.on("isRestored", () => {
+        ipcRenderer.send("maximize")
+      })
+
+      ipcRenderer.on("isMaximized", () => {
+        ipcRenderer.send("unmaximize")
+      })
+
+
       })
 
 //Cambiar icono maximizar
