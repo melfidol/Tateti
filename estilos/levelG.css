@@ -1,0 +1,27 @@
+.easterEgg_G {
+    
+}
+
+video{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.video_container{
+    width: 100%;
+    height: 100%;
+    position:relative;
+
+}
+
+.span_container{
+    position:absolute;
+   top:0;
+}
+
+img{
+    
+}
