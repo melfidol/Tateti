@@ -19,11 +19,28 @@ body{
     min-height: 100vh;
     display: grid;
     grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 30% 70%;
+    grid-template-rows: 25% 55% 25%;
     background: url(../src/fondo.webp);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+}
+
+.arcade{
+    
+    grid-column: 2;
+    grid-row: 1/-1;
+    height: 100%;
+    width: auto;
+    position: relative;
+
+    
+    background-repeat: no-repeat;
+   
+}
+
+.img{
+    margin-top: 100px;
 }
 
 .span_container{
@@ -33,7 +50,7 @@ body{
     margin: auto;
     width: fit-content;
     height: fit-content;
-    padding-top: 30px
+    padding-bottom: 40px
 }
 
 .span_container span{
@@ -75,7 +92,7 @@ body{
     grid-column: 2;
     grid-row: 2;
     height: 80%;
-    width: auto;
+    width: 80%;
     position: relative;
     border-radius: 40px;
     background: linear-gradient(black rgb(56, 53, 53));
@@ -92,7 +109,7 @@ body{
     margin: 10%, 0;
     width: auto;
     height: 80%;
-    background-color: #000000;
+    
 }
 
 .glow::before,
