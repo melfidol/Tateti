@@ -1,71 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Ta Te Ti</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='estilos/style.css'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/inicio.css">
     <link rel="stylesheet" href="estilos/nav.css">
-
-    <script src='funciones/main.js'></script>
-    <script src="funciones/juego.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Ta Te Ti</title>
 </head>
+
 <body>
     <script id="replace_with_navbar" src="funciones/nav.js"></script>
-    <div id="aplicacion">
-
-        <!-- agregar barra, y en el css ponerle:
-        -webkit-app-region: drag;
-        para poder mover la ventana por la barra
-        el boton close no tiene q estar afectado por esto
-       
-
-        <div id="menu" class="menudesplegable"> 
-            <ul>
-                <li><button id="botonCerrarMenu"></button></li>
-                <li><a class="restartGame" href="#">Reiniciar Partida</a></li>
-                <li><a class="newGame" href="#">Nueva Partida</a></li>
-                <li><a class="quitGame" href="#">Salir del juego</a></li>
-                
-            </ul>
-            
-        </div>
-             -->
-        <h1> Tablero gg</h1>
-        <h2 class="textoGanador"> Jugador 1 Ha ganado</h2>
-
-        <div class="tablero">
-            <button class="Tbutton"> </button>
-            <button class="Tbutton"> </button>
-            <button class="Tbutton"> </button>
-            <button class="Tbutton"> </button>
-            <button class="Tbutton"> </button>
-            <button class="Tbutton"> </button>
-            <button class="Tbutton"> </button>
-            <button class="Tbutton"> </button>
-            <button class="Tbutton"> </button>
-        </div>
+    <div class="span_container">
+            <span style="--l: 'Ta';">Ta</span>
+            <span style="--l: 'Te';">Te</span>
+            <span style="--l: 'Ti';">Ti</span>
+    </div> 
+    <div class="block glow">
     </div>
-    
-    
-    
-        <!-- 
-            agregar al main para q se mueva hacia la izq al abrir el menu
-            #main {
-            transition: margin-left .5s;
-            padding: 20px;
-            }
+    <div class="menu">
+    <a href="index.html" class="menu_button">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+        PLAY GAME
+    </a>
+    <a href="rules.html" class="menu_button">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+        HOW TO PLAY
+    </a>
+    <a id="quit_btn" href="" onclick="Close();" class="menu_button">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+        QUIT GAME
+    </a>
+    </div>
 
-            https://www.w3schools.com/howto/howto_js_sidenav.asp
-        -->
-    
-    
-
-    <!-- <span onclick="openNav()">open</span> -->
+    <audio src="src/wap.mp3" type="mp3" autoplay loop></audio> 
 </body>
 </html>

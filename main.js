@@ -28,7 +28,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('levelgatito.html')
+  mainWindow.loadFile('index.html')
 
 
 
