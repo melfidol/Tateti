@@ -14,9 +14,10 @@
     border: none;
     padding: 0;
 }
-body{
+html, body{
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
+    position: relative;
 }
 
 .grid{
@@ -77,8 +78,9 @@ body{
     grid-column: 1/-1;
     grid-row: 2;
     position:relative;
+    margin: auto;
     height: 100%;
-    width: 100%;
+    width: auto;
     overflow: hidden;
 
 }
