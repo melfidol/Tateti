@@ -44,6 +44,11 @@
 
 }
 
+#botonMenu {
+    background-image: url('../src/icon_menu.png');
+    background-size: contain;
+}
+
 #botonMin {
     background-image: url('../src/icon_minimize.png');
     background-size: contain;
