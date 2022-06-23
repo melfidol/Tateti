@@ -28,7 +28,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('lol.html')
+  mainWindow.loadFile('levelgatito.html')
 
 
 
