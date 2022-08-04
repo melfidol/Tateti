@@ -1,14 +1,18 @@
 # Tateti
 Nuestro proyecto se basa en un juego de Tateti que ofrece distintas posibilidades de experiencias de usuario.
 
-#### Integrantes  👥
-Moldes Delfina
-Carballeira Dolfina
-Alegre Julieta
+## Integrantes  👥
+------------
+- Moldes Delfina
+- Carballeira Dolfina
+- Alegre Julieta
 
-#### Instalación ⬇️
+## Instalación ⬇️
+------------
 
-#### Tareas Realizadas ☑️
+
+## Tareas Realizadas ☑️
+------------
 ✔️ Definición de proyecto (Delfina, Julieta)
 
 ✔️ Borrador de proyecto (Delfina, Julieta)
@@ -25,7 +29,8 @@ Alegre Julieta
 
 ✔️ Trabajos de base de datos (Dolfina, Delfina)
 
-#### Tareas a Realizar 🔜
+## Tareas a Realizar 🔜
+------------
 ❌ Añadir RWD
 
 ❌ Corregir estilos
