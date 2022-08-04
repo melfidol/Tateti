@@ -3,9 +3,7 @@ Nuestro proyecto se basa en un juego de Tateti que ofrece distintas posibilidade
 
 #### Integrantes  👥
 Moldes Delfina
-
 Carballeira Dolfina
-
 Alegre Julieta
 
 #### Instalación ⬇️
