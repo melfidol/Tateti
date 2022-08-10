@@ -39,3 +39,6 @@ Nuestro proyecto se basa en un juego de Tateti que ofrece distintas posibilidade
 
 ❌ Profundizar en la base de datos
 
+❌ Funciones principales del juego
+
+❌ Almacenar y devolver datos que sirvan en el juego
