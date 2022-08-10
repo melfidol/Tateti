@@ -24,9 +24,11 @@ Nuestro proyecto se basa en un juego de Tateti que ofrece distintas posibilidade
 
 ✔️ Instalación js, electron, etc. (Julieta)
 
+✔️ Funcionalidades de la ventana (Dolfina, Delfina)
+
 ✔️ Trabajos de estilo y funcionalidad (Dolfina, Delfina)
 
-✔️ Trabajos de base de datos (Dolfina, Delfina)
+✔️ Trabajos de base de datos (Dolfina)
 
 ## Tareas a Realizar 
 ❌ Añadir RWD
