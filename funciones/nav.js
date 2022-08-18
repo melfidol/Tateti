@@ -50,9 +50,9 @@ fetch('./nav.html')
 //Cambiar icono maximizar
 function changeMaxResBtn(isMaximizedApp) {
     if (isMaximizedApp) {
-      botonMaxRestore.style.backgroundImage = "url('src/icon_restore.png')"
+      botonMaxRestore.style.backgroundImage = "url('source/icon_restore.png')"
     } else {
-        botonMaxRestore.style.backgroundImage = "url('src/icon_maximize.png')"
+        botonMaxRestore.style.backgroundImage = "url('source/icon_maximize.png')"
     }
 }
   

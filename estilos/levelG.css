@@ -1,12 +1,12 @@
 
 @font-face {
     font-family:'Arcade';
-    src: url(../src/Arcade\ Boxes.ttf);
+    src: url(../source/Arcade\ Boxes.ttf);
 }
 
 @font-face {
     font-family:'Retrolight';
-    src: url(../src/Retrolight.ttf);
+    src: url(../source/Retrolight.ttf);
 }
 
 *{

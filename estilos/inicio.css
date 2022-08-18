@@ -1,11 +1,11 @@
 @font-face {
     font-family:'Arcade';
-    src: url(../src/Arcade\ Boxes.ttf);
+    src: url(../source/Arcade\ Boxes.ttf);
 }
 
 @font-face {
     font-family:'Retrolight';
-    src: url(../src/Retrolight.ttf);
+    src: url(../source/Retrolight.ttf);
 }
 
 *{
@@ -20,7 +20,7 @@ body{
     display: grid;
     grid-template-columns: 30% 40% 30%;
     grid-template-rows: 25% 55% 25%;
-    background: url(../src/fondo.webp);
+    background: url(../source/fondo.webp);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;

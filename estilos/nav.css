@@ -47,22 +47,22 @@
 }
 
 #botonMenu {
-    background-image: url('../src/icon_menu.png');
+    background-image: url('../source/icon_menu.png');
     background-size: contain;
 }
 
 #botonMin {
-    background-image: url('../src/icon_minimize.png');
+    background-image: url('../source/icon_minimize.png');
     background-size: contain;
 }
 
 #botonMax {
-background-image: url('../src/icon_maximize.png');
+background-image: url('../source/icon_maximize.png');
 background-size: cover;
 }
 
 #botonCerrar {
-    background-image: url('../src/icon_close.png');
+    background-image: url('../source/icon_close.png');
     background-size: contain;
 }
 
