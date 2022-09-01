@@ -1,11 +1,12 @@
-#botonCerrarMenu {
+
+.botonCerrarMenu {
     width: 20px;
     height: 20px;
     border: 0px;
     background-color: rgb(0, 0, 0);
 }
 
-#barra {
+.barra {
     position: fixed;
     top: 0;
     left: 0;
@@ -22,7 +23,7 @@
 }
 
 
-#titulobarra {
+.titulobarra {
 
     font-size: 1em;
     font-family: 'Press Start 2P';
@@ -31,7 +32,7 @@
     color: white;
 }
 
-#botones{
+.botones{
     padding-right: 10px;
 }
 
@@ -46,28 +47,28 @@
 
 }
 
-#botonMenu {
-    background-image: url(https://localhost:3000/source/icon_menu.png);
+.botonMenu {
+    background-image: url(http://localhost:3000/source/icon_menu.png);
     background-size: contain;
 }
 
-#botonMin {
-    background-image: url(https://localhost:3000/source/icon_minimize.png);
+.botonMin {
+    background-image: url(http://localhost:3000/source/icon_minimize.png);
     background-size: contain;
 }
 
-#botonMax {
-background-image: url(https://localhost:3000/source/icon_maximize.png);
+.botonMax {
+background-image: url(http://localhost:3000/source/icon_maximize.png);
 background-size: cover;
 }
 
-#botonCerrar {
-    background-image: url(https://localhost:3000/source/icon_close.png);
+.botonCerrar {
+    background-image: url(http://localhost:3000/source/icon_close.png);
     background-size: contain;
 }
 
 
-#botonMenu {
+.botonMenu {
     /* background-image: ; */
     width: 25px;
     height: 25px;
