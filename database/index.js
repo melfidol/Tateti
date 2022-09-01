@@ -16,8 +16,8 @@ const goalSchema = new mongoose.Schema({
 const Goal = mongoose.model('goal', goalSchema);
 
 let goal1 = new Goal({ 
-    title: 'Acaba con la homofobia',
-    description: 'ayuda',
+    title: 'Gana una partida',
+    description: 'Gana una partida de tateti contra la máquina',
     date: new Date(),
     isFinished:false
 });
