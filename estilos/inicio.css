@@ -48,8 +48,8 @@ body{
     grid-column: 1/-1;
     grid-row: 1;
     margin: auto;
-    width: fit-content;
-    height: fit-content;
+    width: auto;
+    height: auto;
     padding-bottom: 40px
 }
 
@@ -92,7 +92,7 @@ body{
     grid-column: 2;
     grid-row: 2;
     height: 80%;
-    width: 80%;
+    width: 100%;
     position: relative;
     border-radius: 40px;
     background: linear-gradient(black rgb(56, 53, 53));
@@ -109,6 +109,7 @@ body{
     margin: 10%, 0;
     width: auto;
     height: 80%;
+    background-color: black;
     
 }
 
@@ -165,6 +166,7 @@ body{
     text-decoration: none;
     overflow: hidden;
     transition: 0.2s;
+
 }
 
 .menu_button:hover{
@@ -177,6 +179,10 @@ body{
 .menu_button span{
     position: absolute;
     display: block;
+}
+
+#ta, #te, #ti{
+    --l: 'Ta';
 }
 
 #span1{
