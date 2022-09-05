@@ -1,0 +1,29 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 37.5% 25% 37.5%;
+    grid-template-rows: 20% 60% 20%;
+}
+
+.title{
+    margin: 0;
+    grid-column: 1/-1;
+    text-align: center;
+    line-height: 150px;
+}

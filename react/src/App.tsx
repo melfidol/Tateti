@@ -1,4 +1,5 @@
 import './App.css';
+import Reviews from './components/Review';
 import Titlebar from './components/Titlebar';
 
 function App() {
