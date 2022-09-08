@@ -6,10 +6,6 @@ var botonCerrar = null
 const body = document.querySelector("body")
 var nav = null
 
-function Close(){
-    ipcRenderer.send("close")
-}
-
 //ESCUCHA MINIMIZAR, sendea mensaje para que le main lo ejecute
 fetch('./nav.html')
   .then(res => res.text())

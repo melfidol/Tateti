@@ -1,12 +1,11 @@
 import './App.css';
-import Reviews from './components/Review';
 import Titlebar from './components/Titlebar';
+const ipcRenderer = window.require("electron").ipcRenderer
 
 function App() {
   return (
-
-    <div className='mainApp'>
-      <Titlebar />
+  <div className='mainApp'> 
+  <Titlebar />
     <div className="span_container">
               <span id='ta'>Ta</span>
               <span id='te'>Te</span>
@@ -29,7 +28,7 @@ function App() {
           <span id="span4"></span>
           HOW TO PLAY
       </a>
-      <a id="quit_btn" href="" onClick={e => closeApp()} className="menu_button">
+      <a id="quit_btn" href="" onClick={e => ipcRenderer.send('close')} className="menu_button">
           <span id="span1"></span>
           <span id="span2"></span>
           <span id="span3"></span>
@@ -38,13 +37,12 @@ function App() {
       </a>
       </div>
 
-      <audio src="source/wap.mp3" itemType='mp3' autoPlay loop></audio> 
+      <audio src="/source/wap.mp3" itemType='mp3' autoPlay loop></audio> 
   </div>
+    
   );
 }
 
 export default App;
-function closeApp(): void {
-  throw new Error('Function not implemented.');
-}
+
 

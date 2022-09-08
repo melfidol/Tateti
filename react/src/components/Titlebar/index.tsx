@@ -1,14 +1,34 @@
+import { useState } from 'react'
 import style from './Titlebar.module.css' 
+const ipcRenderer = window.require("electron").ipcRenderer
 
 function Titlebar(){
+
+    const [isMaximized,setIsMaximized] = useState(false)
+    const [isFocused,setIsFocused] = useState(false)
+
+    ipcRenderer.on("isMaximized", () => {
+        setIsMaximized(true)
+    })
+    ipcRenderer.on("isRestored", () => {
+        setIsMaximized(false)
+    })
+    ipcRenderer.on("isFocused", () => {
+        setIsFocused(true)
+    })
+        
+    ipcRenderer.on("isInactive", () => {
+    setIsFocused(false)
+    })
+        
     return(
-        <div id="barra" className={style.barra}>
-        <button id="botonMenu" className={[style.botonBarra, style.botonMenu].join(" ")} value="M" title='lam'></button>
+        <div className={style.barra}>
+        <button title='menu' className={[style.botonBarra, style.botonMenu].join(" ")}></button>
         <div id="titulobarra" className={style.titulobarra}>TTT</div>
         <div id="botones" className={style.botones}>
-            <button id="botonMin" className={[style.botonBarra, style.botonMin].join(" ")} value="-" title='lam'></button>
-            <button id="botonMax" className={[style.botonBarra, style.botonMax].join(" ")} value="C" title='lam'></button>
-            <button id="botonCerrar" className={[style.botonBarra, style.botonCerrar].join(" ")} value="X" title='lam'></button>
+            <button title='minimize' onClick={e => ipcRenderer.send('minimize')} className={[style.botonBarra, style.botonMin].join(" ")}  ></button>
+            <button title={isMaximized ? 'unmaximize' : 'maximize'} onClick={e => ipcRenderer.send('maximizeRestoreApp')} style={{backgroundImage : isMaximized ?  "url('/source/icon_restore.png')" : "url('/source/icon_maximize.png')"}} className={[style.botonBarra, style.botonMax].join(" ")} ></button>
+            <button title='close' onClick={e => ipcRenderer.send('close')} className={[style.botonBarra, style.botonCerrar].join(" ")} ></button>
         </div>
     </div>
     )

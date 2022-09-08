@@ -1,43 +1,66 @@
 
-
-const { ipcRenderer } = require("electron");
-
-//cuando apretamos el boton:
-function delete-Task(numberTask) {
-    tasks = tasksList.find((e, index) => index == numberTask)
-
-    let idTask = tasks._id
-    ipcRenderer.send("delete-task", idTask)
-}
-ipcRenderer.send("delete-task", idTask)
-
-
-ipcRenderer.on("deleted-task", (e, idTask) => {
-    console.log(idTask)
-    alert("Tarea borrada: ", idTask);
-})
-
-/*en main.js para q el proceso escuche el msj para borrar:
-
-ipcMain.on("delete-task", (e, idTask) => {
-    console.log("BORRAR: ", idTask);
-
-    TaskDelete(idTask).then(r => {
-        console.log("CORRECTO")
-
-        e.reply("deleted-task", idTask)
-    }).catch(e => {
-        console.log("ERROR: ", e)
+var goalsList = ["Ganar una partida", "Ganar 5 partidas", "Empatar una partida", "Terminar el juego"].map((element, index) => {
+    return {
+      title: "Objetivo " + (index + 1),
+      description: "Para completar este objetivo debes: " + element,
+      date: new Date(),
+      isFinished: index % 3 == 0
+    }
+  })
+  
+  const newGoalForm = document.getElementById("newGoalForm");
+  const goalsListUI = document.getElementById("goalsListUI");
+  
+  goalsListUI.innerHTML = goalsList.map((goal, index) => {
+    return goalToHTML(goal, index);
+  })
+  
+  newGoalForm.addEventListener("submit", e => {
+    e.preventDefault();
+    // console.log(e)
+  
+    let title = document.getElementById("title");
+    let description = document.getElementById("description");
+  
+    let newGoal = {
+      title: title.value,
+      description: description.value,
+      date: new Date(),
+      isFinished: false
+    }
+  
+    goalsList.push(newGoal);
+    // console.log(goalsList);
+  
+    renderGoals();
+  })
+  
+  
+  function goalToHTML(goal, index) {
+    return `
+      <li id="goal${index}" class="goal">
+        <input onClick="checkGoal(${index})" type="checkbox" name="" id="" ${goal.isFinished ? "checked" : ""} >
+        <div class="text">
+          <h3>${goal.title}</h3>
+          <p>${goal.description}</p>
+        </div>
+        <i class="fa-solid fa-trash" onClick="deleteGoal(${index})></i>
+      </li>
+    `
+  }
+  
+  function checkGoal(numberGoal) {
+    goalsList[numberGoal].isFinished = !goalsList[numberGoal].isFinished
+    renderGoals()
+  }
+  
+  function deleteGoal(numberGoal) {
+    goalsList = goalsList.filter((e, index) => index != numberGoal)
+    renderGoals()
+  }
+  
+  function renderGoals() {
+    goalsListUI.innerHTML = goalsList.map((goal, index) => {
+      return goalToHTML(goal, index);
     })
-
-    //responde que borro la tarea 
-    e.reply("deleted-task", idTask) 
-})
-
-//para q la base de datos borre la tarea
-module.exports = {
-    TasksFind: () => tas
-    TaskDelete: (id) => Task.deleteOne({ _id });
-}
-
-*/
+  }

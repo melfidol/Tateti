@@ -3,6 +3,8 @@ const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 require("./database")
 
+const { GoalsFind, GoalsDelete } = require("./database");
+
 require('electron-reload')(__dirname, {
   electron: path.join(__dirname, 'node_modules', '.bin', 'electron'),
   hardResetMethod: 'exit'
@@ -29,7 +31,8 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadURL('http://localhost:3000')
+
 
 
 
@@ -96,4 +99,23 @@ app.on('window-all-closed', function () {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
+ipcMain.on("getGoals", (e) => {
+  GoalsFind().then(goalsQuery => {
+    console.log(goalsQuery);
+    let goals = goalsQuery.map(e => e._doc)
+    e.reply("goals", goals)
+  })
+})
 
+ipcMain.on("delete-goal", (e, idGoal) => {
+  console.log("BORRAR: ", idGoal);
+
+  GoalDelete(idGoal).then(r => {
+    console.log(r)
+    console.log("CORRECTO")
+
+    e.reply("deleted-goal", idGoal)
+  }).catch(e => {
+    console.log("ERROR: ", e)
+  })
+})
