@@ -1,25 +1,30 @@
 import { Login } from '@mui/icons-material';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Titlebar from './components/Titlebar';
 import Index from './views/Index/inicio';
-const ipcRenderer = window.require("electron").ipcRenderer
+import Jugar from './views/Index/jugar';
 
 function App() {
   return (
-  <div className='mainApp'> 
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-      </Routes>
+      <div className='mainApp'>
+
+
+
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/rutajugar" element={<Jugar />} />
+          
+        </Routes>
+
+
+
+
+        {/* <Titlebar /> */}
+      </div>
+
     </BrowserRouter>
-
-    
-
-  <Titlebar/>
-  <Index/>  
-  </div>
-    
   );
 }
 
