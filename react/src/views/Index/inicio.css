@@ -7,6 +7,7 @@
     margin: 0;
     border: none;
     padding: 0;
+    outline: none;
   }
   
   .main {
@@ -86,12 +87,12 @@
     margin: 10%, 0;
     width: auto;
     height: 80%;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgb(0, 0, 0);
   
   }
   
   .glow::before,
-  .glow::after {
+  .glow::after{
     content: "";
     position: absolute;
     left: -2px;
@@ -125,7 +126,7 @@
     }
   }
   
-  .glow::after {
+  .glow::after{
     filter: blur(40px);
     opacity: .5;
   }
