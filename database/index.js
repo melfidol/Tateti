@@ -15,14 +15,14 @@ const goalSchema = new mongoose.Schema({
 
 const Goal = mongoose.model('goal', goalSchema);
 
-/*let goal1 = new Goal({ 
+let goal1 = new Goal({ 
     title: 'Gana una partida',
     description: 'Gana una partida de tateti contra la máquina',
     date: new Date(),
     isFinished:false
 });
 
-goal1.save();*/
+goal1.save();
 
 module.exports = {
     GoalsFind: () => Goal.find(),
