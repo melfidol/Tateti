@@ -6,8 +6,11 @@
     background-color: rgb(0, 0, 0);
 }
 
+.fondobarra {
+
+}
+
 .barra {
-    -webkit-app-region:drag;
     position: fixed;
     top: 0;
     left: 0;
@@ -20,16 +23,18 @@
     align-items: center;
     background-color: #616ba7;
     z-index: 5;
+    grid-column: 1/-1;
 
 }
 
 
 .titulobarra {
-
+    margin-left: 10px;
+    -webkit-app-region:drag;
     font-size: 1em;
     font-family: 'Press Start 2P';
-    left: 40px;
-    position: absolute;
+    flex: 2;
+    text-align: left;
     color: white;
 }
 
@@ -49,7 +54,7 @@
 }
 
 .botonMenu {
-    background-image: url(http://localhost:3000/source/icon_menu.png);
+    background-image: url(http://localhost:3000/source/icon_home.png);
     background-size: contain;
 }
 

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import style from './Titlebar.module.css' 
 const ipcRenderer = window.require("electron").ipcRenderer
 
@@ -23,7 +24,7 @@ function Titlebar(){
         
     return(
         <div className={style.barra}>
-        <button title='menu' className={[style.botonBarra, style.botonMenu].join(" ")}></button>
+        <Link to="/"> <button title='menu' className={[style.botonBarra, style.botonMenu].join(" ")}></button> </Link>
         <div id="titulobarra" className={style.titulobarra}>TTT</div>
         <div id="botones" className={style.botones}>
             <button title='minimize' onClick={e => ipcRenderer.send('minimize')} className={[style.botonBarra, style.botonMin].join(" ")}  ></button>
