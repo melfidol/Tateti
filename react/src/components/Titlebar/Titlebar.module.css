@@ -1,3 +1,6 @@
+*{
+    outline: none;
+}
 
 .barra {
     position: fixed;
