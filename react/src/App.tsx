@@ -10,7 +10,7 @@ function App() {
       <div className='mainApp'>
 
 
-
+      <Titlebar/>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/Tateti" element={<Jugar />} />

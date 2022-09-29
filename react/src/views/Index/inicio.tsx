@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Titlebar from '../../components/Titlebar'
 import './inicio.css'
 const ipcRenderer = window.require("electron").ipcRenderer
 
