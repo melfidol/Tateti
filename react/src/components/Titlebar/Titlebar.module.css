@@ -1,22 +1,14 @@
 
-.botonCerrarMenu {
-    width: 20px;
-    height: 20px;
-    border: 0px;
-    background-color: rgb(0, 0, 0);
-}
-
-.fondobarra {
-
-}
-
 .barra {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 30px;
-    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 3px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -38,11 +30,6 @@
     color: white;
 }
 
-.botones{
-    padding-right: 10px;
-}
-
-
 .botonBarra{
     width: 25px;
     height: 25px;
@@ -50,6 +37,7 @@
     color: aliceblue;
     background-color: #040814;
     border-radius: 5px;
+    margin: 0 3px;
 
 }
 
@@ -75,7 +63,6 @@ background-size: cover;
 
 
 .botonMenu {
-    /* background-image: ; */
     width: 25px;
     height: 25px;
     border: 0px;
