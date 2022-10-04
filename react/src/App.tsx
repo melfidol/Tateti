@@ -16,7 +16,7 @@ function App() {
 
 
 
-
+      <Titlebar/>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/rutajugar" element={<Jugar />} />

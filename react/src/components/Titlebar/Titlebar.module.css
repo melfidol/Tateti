@@ -1,42 +1,37 @@
-
-.botonCerrarMenu {
-    width: 20px;
-    height: 20px;
-    border: 0px;
-    background-color: rgb(0, 0, 0);
+*{
+    outline: none;
 }
 
 .barra {
-    -webkit-app-region:drag;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 30px;
-    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 3px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
     background-color: #616ba7;
     z-index: 5;
+    grid-column: 1/-1;
 
 }
 
 
 .titulobarra {
-
+    margin-left: 10px;
+    -webkit-app-region:drag;
     font-size: 1em;
     font-family: 'Press Start 2P';
-    left: 40px;
-    position: absolute;
+    flex: 2;
+    text-align: left;
     color: white;
 }
-
-.botones{
-    padding-right: 10px;
-}
-
 
 .botonBarra{
     width: 25px;
@@ -45,11 +40,12 @@
     color: aliceblue;
     background-color: #040814;
     border-radius: 5px;
+    margin: 0 3px;
 
 }
 
 .botonMenu {
-    background-image: url(http://localhost:3000/source/icon_menu.png);
+    background-image: url(http://localhost:3000/source/icon_home.png);
     background-size: contain;
 }
 
@@ -70,7 +66,6 @@ background-size: cover;
 
 
 .botonMenu {
-    /* background-image: ; */
     width: 25px;
     height: 25px;
     border: 0px;
