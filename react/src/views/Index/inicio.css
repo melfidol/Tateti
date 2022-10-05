@@ -3,11 +3,7 @@
     src: url(http://localhost:3000/source/Retrolight.ttf);
   }
   
-  * {
-    margin: 0;
-    border: none;
-    padding: 0;
-  }
+  
   
   .main {
     width: 100%;
