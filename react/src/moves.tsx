@@ -1,12 +1,5 @@
-import { StarRate } from "@mui/icons-material";
-import { AlertProps, Box, Button, Rating, Snackbar, SnackbarOrigin, TextField } from "@mui/material";
-import React from "react";
 import { useState } from "react";
 import './moves.css'
-
-export interface State extends SnackbarOrigin {
-    open: boolean;
-}
 
 function Moves() {
 
@@ -23,10 +16,12 @@ function Moves() {
     
     return (
         <div className="container">
-            
+            <h3 className="title">MOVIMIENTOS RESTANTES</h3>
+            <h1 className="movesNumber"></h1>
 
         </div>
     )
 
 }
+
 export default Moves;
