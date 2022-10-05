@@ -7,6 +7,11 @@ function Moves() {
     const movesLeft = 5 - movesMade;
     const [movesAvailable, setMovesA] = useState(Boolean);
 
+    // on click de los botones del tateti modifica movesMade
+
+    // y se va actualizando el estado de movesAvailable
+    // que se va mostrando en pantalla en movesNumber
+
 
     function updateMovesA(movesLeft: number) {
         if(movesLeft == 0) {
