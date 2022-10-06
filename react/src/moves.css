@@ -1,0 +1,13 @@
+.container {
+    width: 50%;
+    height: 15%;
+    background-color: #616ba7;
+}
+
+.title {
+    text-align: center;
+}
+
+.movesNumber {
+    text-align: center;
+}
