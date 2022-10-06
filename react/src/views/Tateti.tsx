@@ -13,11 +13,17 @@ function Tateti() {
     const [jugador, setJugador] = useState(1) // jugador 1 o jugador 2
 
     function CambiarPosicion(index:number) { // falta poner esto en un if, restringiendo poder cambiar de ficha si la posicion ya esta tomada por un jugador
+        console.log(posiciones)
+        if(posiciones[index] != 0){
+            alert("cambie de posicion")
+        }
+        else{
         console.log(index)
         let nuevasPosiciones = [...posiciones]
         nuevasPosiciones[index] = jugador
         setPosiciones(nuevasPosiciones)
         setJugador(jugador % 2+1)
+        }
     }
 
     return (
