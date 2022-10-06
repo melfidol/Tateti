@@ -7,24 +7,30 @@ console.log("Base de datos conectada")
 })
 
 const goalSchema = new mongoose.Schema({
+    _id: String,
     title: String,
     description: String,
-    date: Date,
-    isFinished: Boolean
-  }, { _id: true });
+    date: Date
+  }
+  , { _id: true }
+  );
 
 const Goal = mongoose.model('goal', goalSchema);
 
-/*let goal1 = new Goal({ 
+let goal1 = new Goal({ 
     title: 'Gana una partida',
     description: 'Gana una partida de tateti contra la máquina',
-    date: new Date(),
-    isFinished:false
+    date: new Date()
 });
 
-goal1.save();*/
+goal1.save();
+
+const goals = [
+  new Goal(),
+  new Goal()
+]
 
 module.exports = {
     GoalsFind: () => Goal.find(),
-    GoalsDelete: (_id) => Goal.collection.deleteOne({ _id: new mongoose.Types.ObjectId(_id) })
+    GoalsDelete: (_id) => Goal.collection.deleteOne({ _id: _id })
   }

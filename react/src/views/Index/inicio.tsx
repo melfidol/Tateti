@@ -12,10 +12,10 @@ function Index() {
                 <span id='te'>Te</span>
                 <span id='ti'>Ti</span>
             </div>
-            <div className="block glow">
+            <div className={["glow", "block"].join(" ")}>
             </div>
             <div className="menu">
-                <Link to="rutajugar">
+                <Link to="Tateti">
                     <a className="menu_button">
                     <span id="span1"></span>
                     <span id="span2"></span>

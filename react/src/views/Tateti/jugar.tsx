@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Moves from '../../moves'
 const ipcRenderer = window.require("electron").ipcRenderer
 
 function Jugar() {
