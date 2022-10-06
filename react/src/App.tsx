@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Titlebar from './components/Titlebar';
 import Index from './views/Index/inicio';
-import Tateti from './views/Tateti';
+import Tateti from './views/Tateti/Tateti';
 
 function App() {
   return (
