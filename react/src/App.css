@@ -3,12 +3,6 @@
   src: url(http://localhost:3000/source/Retrolight.ttf);
 }
 
-* {
-  margin: 0;
-  border: none;
-  padding: 0;
-}
-
 .mainApp {
   width: 100%;
   min-height: 100vh;
