@@ -8,12 +8,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className='mainApp'>
-
-        <Link to= "/tateti"> Tateti
-        </Link>
-
-
-
       <Titlebar/>
         <Routes>
           <Route path="/" element={<Index />} />
