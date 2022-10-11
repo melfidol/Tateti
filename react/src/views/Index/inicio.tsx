@@ -24,14 +24,15 @@ function Index() {
                     PLAY GAME
                     </a>
                 </Link>
-                
-                <a href="rules.html" className="menu_button">
+                <Link to="goals">
+                <a className="menu_button">
                     <span id="span1"></span>
                     <span id="span2"></span>
                     <span id="span3"></span>
                     <span id="span4"></span>
                     HOW TO PLAY
                 </a>
+                </Link>
                 <a id="quit_btn" href="" onClick={e => ipcRenderer.send('close')} className="menu_button">
                     <span id="span1"></span>
                     <span id="span2"></span>
