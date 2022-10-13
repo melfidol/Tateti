@@ -8,7 +8,7 @@ interface props {
 function Casilla({handleClick, posicion, index}:props ) {
     
     return (
-        <button className={"Tbutton jugador" + posicion } onClick={handleClick} >{posicion}-{index}</button>
+        <button className={"Tbutton jugador" + posicion } onClick={handleClick} ></button>
 
     )
 }
