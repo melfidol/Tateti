@@ -12,7 +12,7 @@ const goalSchema = new mongoose.Schema({
   description: {type : String, required:true},
   achieved_date: Date,
   img_src:String,
-  requirements:String
+  requirements:{type : String, required:true}
   }
   , { _id: true , timestamps:true}
   );
@@ -59,7 +59,14 @@ const goals = [
     description:'Enter a secret level',
     achieved_date:null,
     img_src:'http://localhost:3000/source/goals_img/scape_room.jpg',
-    requirements:null})
+    requirements:'none'}),
+    new Goal({
+      _id:ids[5],
+      title:'Testing',
+      description:'Enter a secret level',
+      achieved_date:null,
+      img_src:'http://localhost:3000/source/among2.jpg',
+      requirements:ids[2]})
 ]
 goals.forEach(goal=>goal.save())
   }

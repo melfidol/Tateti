@@ -1,6 +1,6 @@
 .diagram-component {
-    width: 400px;
-    height: 400px;
-    border: solid 1px black;
-    background-color: white;
+    width: 90%;
+    height: 600px;
+    margin: auto;
+    background-color: grey;
   }
