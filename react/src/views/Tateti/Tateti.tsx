@@ -64,7 +64,7 @@ function Tateti() {
 
             <div className="tablero">
                 {posiciones.map((posicion, index) =>
-                    <Casilla handleClick={() => CambiarPosicion(index)} posicion={posicion} index={index}/>
+                    <Casilla handleClick={() => CambiarPosicion(index)} tipo="jugador" posicion={posicion} index={index}/>
                 )}
 
             </div>
