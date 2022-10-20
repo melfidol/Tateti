@@ -24,7 +24,15 @@ function Index() {
                     PLAY GAME
                     </a>
                 </Link>
-                
+                <Link to="Review">
+                    <a className="menu_button">
+                    <span id="span1"></span>
+                    <span id="span2"></span>
+                    <span id="span3"></span>
+                    <span id="span4"></span>
+                    PLAY GAME
+                    </a>
+                </Link>
                 <a href="rules.html" className="menu_button">
                     <span id="span1"></span>
                     <span id="span2"></span>
