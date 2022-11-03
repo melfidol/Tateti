@@ -3,9 +3,20 @@
   src: url(http://localhost:3000/source/Retrolight.ttf);
 }
 
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+body{
+  height: 100vh;
+  padding: 0px;
+  background: url(http://localhost:3000/source/fondo.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .mainApp {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  z-index: 0;
 }

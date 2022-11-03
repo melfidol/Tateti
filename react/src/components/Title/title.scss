@@ -1,0 +1,43 @@
+$fontSize: 20px;
+
+#ui {
+  will-change: transform;
+  transform-style: preserve-3d;
+  margin-left: 50px;
+  perspective: 500px;
+  cursor: default;
+  .text {
+    position: absolute;
+    font-size: $fontSize;
+    color: #fff;
+    line-height: $fontSize;
+    font-family: 'Press Start 2P';
+    padding: 20px 0;
+    mix-blend-mode: screen;
+    transform-style: preserve-3d;
+    @for $i from 1 through 26 {
+      $key: $i - 1;
+      $param: 5;
+      &:nth-child(#{$i}) {
+        clip-path: polygon(
+          -30% + ($key * $param) 0,
+          -20% + ($key * $param) 0,
+          20% + ($key * $param) 100%,
+          0% + ($key * $param) 100%
+        );
+        animation: wave 2000ms $key * 200 - 10000ms ease-in-out infinite alternate;
+      }
+    }
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9) rotateX(20deg) rotateY(20deg) rotateZ(0deg);
+    color: #FC466B;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    color: #3F5EFB;
+  }
+}

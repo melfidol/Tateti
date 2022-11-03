@@ -2,7 +2,7 @@ import go from 'gojs';
 import { useEffect, useState } from 'react';
 import GoalModel from '../../models/goalModel';
 import { ReactDiagram } from 'gojs-react';
-import "./goals_list.css"
+import goalsStyle from "./goals_list.module.css"
 const ipcRenderer = window.require("electron").ipcRenderer
 function GoalsList(){
     
@@ -18,19 +18,15 @@ const [goalsList, setGoalsList] = useState<GoalModel[]>([])
     setGoalsList(goals)
   })
 
-function isComplete(goal: GoalModel){
-  if(goal.achieved_date != null){
-    return true
-  }
-  return(false)
-}
+// function isComplete(goal: GoalModel){
+// return !!goal.achieved_date}
 
 function isUnlocked(goal:GoalModel){
   if(goal.requirements == 'none'){
     return true
   }else{
     const parent = goalsList.find(e => e._id === goal.requirements)
-    if(parent?.achieved_date != null){
+    if(parent?.achieved_date){
       return true
     }
   }
@@ -54,7 +50,7 @@ function isUnlocked(goal:GoalModel){
   diagram.nodeTemplate =
     $(go.Node, 'Auto',  // the Shape will go around the TextBlock
       $(go.Shape, 'RoundedRectangle',
-        { name: 'Shape', fill: 'white', strokeWidth: 2, stroke:"black", height:60, width:60 },
+        { name: 'Shape', fill: 'white', strokeWidth: 0, stroke:"black", height:60, width:60 },
         // Shape.fill is bound to Node.data.color
         new go.Binding('fill', 'color')),
       $(go.Picture, {
@@ -65,15 +61,15 @@ function isUnlocked(goal:GoalModel){
     $(go.TreeLayout,
       {
         angle:0,
-        layerSpacing: 30,
-        nodeSpacing:100
+        layerSpacing: 50,
+        nodeSpacing:70
       })
 
       diagram.linkTemplate = 
       new go.Link(
         // default routing is go.Link.Normal
         // default corner is 0
-        { routing: go.Link.Orthogonal, corner: 0})
+        { routing: go.Link.Orthogonal, corner:0})
         // the link path, a Shape
         .add(new go.Shape({ strokeWidth: 3, stroke: "white" }))
         // if we wanted an arrowhead we would also add another Shape with toArrow defined:
@@ -87,7 +83,7 @@ function isUnlocked(goal:GoalModel){
     let resultList: {}[] = [];
     goalsList.forEach((goal) => {
       if(isUnlocked(goal)){
-        if(isComplete(goal)){
+        if(goal.achieved_date){
           listElement = {key :goal._id, goal, src: goal.img_src, color:"#FEB703", opacity:1}
           resultList.push(listElement)
         }else{
@@ -112,18 +108,15 @@ function isUnlocked(goal:GoalModel){
   }
 
   return (
-    <div>
+    <div className={goalsStyle.main}>
       {/* //prolijito */}
-      <h1>Objetivos</h1>
-    <div>
+      <h1 className={goalsStyle.title}>Objetivos</h1>
     <ReactDiagram
         initDiagram={makeDiagram}
-        divClassName='diagram-component'
+        divClassName={goalsStyle['diagram-component']}
         nodeDataArray={setNodeDataArray()}
         linkDataArray={setLinkDataArray()}
       />
-
-    </div>
       
     </div>
   );}

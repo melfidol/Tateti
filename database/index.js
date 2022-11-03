@@ -19,7 +19,11 @@ const goalSchema = new mongoose.Schema({
 
 
 const Goal = mongoose.model('goal', goalSchema);
-const ids = [new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId(),new mongoose.Types.ObjectId()]
+
+const ids = [];
+for (let index = 0; index < 20; index++) {
+  ids.push(new mongoose.Types.ObjectId())
+}
 Goal.count().then(r=>{
   if (r==0){
 

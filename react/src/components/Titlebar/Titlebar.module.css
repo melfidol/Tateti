@@ -1,6 +1,9 @@
 *{
     outline: none;
+    padding: 0px;
+    background: none;
 }
+
 
 .barra {
     position: fixed;
@@ -13,12 +16,11 @@
     padding-top: 5px;
     padding-bottom: 3px;
     display: flex;
-    justify-content: space-between;
+    justify-content:start;
     flex-direction: row;
     align-items: center;
-    background-color: #616ba7;
+    background-color: #a9afd674;
     z-index: 5;
-    grid-column: 1/-1;
 
 }
 
@@ -28,7 +30,7 @@
     -webkit-app-region:drag;
     font-size: 1em;
     font-family: 'Press Start 2P';
-    flex: 2;
+    
     text-align: left;
     color: white;
 }
@@ -38,15 +40,23 @@
     height: 25px;
     border: 0px;
     color: aliceblue;
-    background-color: #040814;
-    border-radius: 5px;
     margin: 0 3px;
+    cursor: pointer;
 
 }
 
 .botonMenu {
-    background-image: url(http://localhost:3000/source/icon_home.png);
-    background-size: contain;
+    background-image: url(http://localhost:3000/source/home.png);
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+}
+
+.botonGoals{
+    height: 20px;
+    width: 20px;
+    background-image: url(http://localhost:3000/source/trophy.png);
+    background-size: cover;
 }
 
 .botonMin {
@@ -64,12 +74,7 @@ background-size: cover;
     background-size: contain;
 }
 
-
-.botonMenu {
-    width: 25px;
-    height: 25px;
-    border: 0px;
-    background-size: contain;
-    background-color: #040814;
-    color: aliceblue;
+.botones{
+    position: absolute;
+    right: 5px;
 }

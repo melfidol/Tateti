@@ -1,48 +1,48 @@
 import { Link } from 'react-router-dom'
-import Titlebar from '../../components/Titlebar'
-import './inicio.css'
+import Title from '../../components/Title'
+import inicio from './inicio.module.css'
+
 const ipcRenderer = window.require("electron").ipcRenderer
 
 function Index() {
     return (
-        <div className="main">
-            
-            <div className="span_container">
-                <span id='ta'>Ta</span>
-                <span id='te'>Te</span>
-                <span id='ti'>Ti</span>
+        <div className={inicio.main}>
+            <div className={inicio.span_container}>
+                <span id={inicio['ta']}>Ta</span>
+                <span id={inicio['te']}>Te</span>
+                <span id={inicio['ti']}>Ti</span>
             </div>
-            <div className="glow block">
+            <div className={[inicio.block, inicio.glow].join(" ")}>
             </div>
-            <div className="menu">
+            <div className={inicio.menu}>
                 <Link to="Tateti">
-                    <a className="menu_button">
-                    <span id="span1"></span>
-                    <span id="span2"></span>
-                    <span id="span3"></span>
-                    <span id="span4"></span>
+                    <a className={inicio.menu_button}>
+                    <span id={inicio['span1']}></span>
+                    <span id={inicio['span2']}></span>
+                    <span id={inicio['span3']}></span>
+                    <span id={inicio['span4']}></span>
                     PLAY GAME
                     </a>
                 </Link>
-                <Link to="goals">
-                <a className="menu_button">
-                    <span id="span1"></span>
-                    <span id="span2"></span>
-                    <span id="span3"></span>
-                    <span id="span4"></span>
+                <Link to="">
+                <a className={inicio.menu_button}>
+                    <span id={inicio['span1']}></span>
+                    <span id={inicio['span2']}></span>
+                    <span id={inicio['span3']}></span>
+                    <span id={inicio['span4']}></span>
                     HOW TO PLAY
                 </a>
                 </Link>
-                <a id="quit_btn" href="" onClick={e => ipcRenderer.send('close')} className="menu_button">
-                    <span id="span1"></span>
-                    <span id="span2"></span>
-                    <span id="span3"></span>
-                    <span id="span4"></span>
+                <a id="quit_btn"onClick={e => ipcRenderer.send('close')} className={inicio.menu_button}>
+                    <span id={inicio['span1']}></span>
+                    <span id={inicio['span2']}></span>
+                    <span id={inicio['span3']}></span>
+                    <span id={inicio['span4']}></span>
                     QUIT GAME
                 </a>
             </div>
 
-            <audio src="/source/wap.mp3" itemType='mp3' autoPlay loop></audio>
+            {/* <audio src="/source/wap.mp3" itemType='mp3' autoPlay loop></audio> */}
         </div>
 
     )
