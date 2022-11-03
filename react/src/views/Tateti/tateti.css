@@ -2,7 +2,7 @@ body{
     Background-color: #040814;
     color: white;
     margin: 0%;
-    padding-top: 30px;
+    
 }
 
 
@@ -83,6 +83,29 @@ h1, h2{
 
 
 
+.mostrarVictoria {
+    position: absolute;
+    background-color: #F5FD08;
+    top: -100px;
+    bottom:0;
+    left:0;
+    right:0;
 
+    background-image: url(http://localhost:3000/source/Gbailando.gif);
+    
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+.noMostrarVictoria {
+    display: none;
+}
+
+
+audio{
+    
+}
 
 

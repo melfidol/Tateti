@@ -15,7 +15,7 @@ function Index() {
             <div className={["glow", "block"].join(" ")}>
             </div>
             <div className="menu">
-                <Link to="Tateti">
+                <Link to="tateti">
                     <a className="menu_button">
                     <span id="span1"></span>
                     <span id="span2"></span>
@@ -24,7 +24,6 @@ function Index() {
                     PLAY GAME
                     </a>
                 </Link>
-                
                 <a href="rules.html" className="menu_button">
                     <span id="span1"></span>
                     <span id="span2"></span>
