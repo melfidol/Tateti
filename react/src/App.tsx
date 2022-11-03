@@ -6,6 +6,7 @@ import Titlebar from './components/Titlebar';
 import GoalsList from './views/GoalsList/goals_list';
 import Index from './views/Index/inicio';
 import Tateti from './views/Tateti/Tateti';
+import Review from './components/Review';
 
 function App() {
   return (
