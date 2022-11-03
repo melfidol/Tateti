@@ -4,6 +4,7 @@ import Casilla from "../../components/Casilla/Casilla";
 import "./tateti.css"
 import { SnackbarOrigin, Snackbar, Alert } from "@mui/material";
 import React from "react";
+import { Gif } from "@mui/icons-material";
 
 
 //  hacer css de las posiciones 0 (vacias) 1 y 2 para que se vean con las fichas puestasq
@@ -46,11 +47,14 @@ function Tateti() {
     ]
 
     const [partidasGanadas, setPartidasGanadas] = useState(
-    [0,0])
+        [0, 0])
 
     const [jugador, setJugador] = useState(1) // jugador 1 o jugador 2
 
     const [message, setMessage] = useState("");
+
+    const [mostrarVictoria, setMostrarVictoria] = useState(false);
+
 
     function CambiarPosicion(index: number, newState: SnackbarOrigin) { // falta poner esto en un if, restringiendo poder cambiar de ficha si la posicion ya esta tomada por un jugador
         console.log(posiciones)
@@ -69,10 +73,11 @@ function Tateti() {
         }
     }
 
-    useEffect(()=> {
+    useEffect(() => {
         Ganar()
         setJugador(jugador % 2 + 1)
-    },[posiciones])
+
+    }, [posiciones])
 
     function Restart() {
         setPosiciones([0, 0, 0, 0, 0, 0, 0, 0, 0])
@@ -84,26 +89,31 @@ function Tateti() {
     function Ganar() {
         PosicionesGanadoras.forEach(element => {
             if (posiciones[element[0]] == jugador && posiciones[element[1]] == jugador && posiciones[element[2]] == jugador) {
-                    setMessage("Ganaste zorra!");
-                    setState(p => ({...p, open: true }))
-                    Restart()
+                setMessage("Ganaste zorra!");
+                setState(p => ({ ...p, open: true }));
 
-                    
-                    if (posiciones[element[0]] === 1){
-                        let partidasGanadasJugador = [...partidasGanadas];
-                        partidasGanadasJugador = posiciones[element[0]] === 1 ? partidasGanadasJugador[0] +1 : partidasGanadasJugador[1] +1;
-                        setPartidasGanadas(partidasGanadasJugador)
-                        
+                setMostrarVictoria(true)
 
-                        
+                Restart();
 
-                    }
-                    
+                let partidasGanadasJugador = [...partidasGanadas];
+                let jugador1 = partidasGanadas[0];
+                let jugador2 = partidasGanadas[1];
 
-                     
-                    
-            
-            
+
+                if (posiciones[element[0]] === 1) {
+
+                    partidasGanadasJugador = [jugador1 + 1, jugador2];
+                    setPartidasGanadas(partidasGanadasJugador)
+
+                } else {
+                    partidasGanadasJugador = [jugador1, jugador2 + 1];
+                    setPartidasGanadas(partidasGanadasJugador)
+
+
+                }
+
+
             }
         });
 
@@ -120,6 +130,27 @@ function Tateti() {
         }
     }
 
+    useEffect(() => {
+        if (mostrarVictoria == true) {
+            MostrarVictoria()
+
+        }
+
+    }, [mostrarVictoria])
+
+    function MostrarVictoria() {
+        setTimeout(StopMVictoria, 10000);
+
+        console.log("jej")
+
+    }
+
+    function StopMVictoria() {
+        setMostrarVictoria(false)
+        console.log("nah")
+    }
+
+
     //nk
 
 
@@ -128,8 +159,25 @@ function Tateti() {
     return (
         <div id="aplicacion">
 
+            {mostrarVictoria && <div className={mostrarVictoria ? "mostrarVictoria" : "noMostrarVictoria"}>
+                Victoria
+
+                <div id="video"> 
+
+                </div>
+            
+
+                <audio src="/source/boca.mp3" itemType='mp3' autoPlay></audio>
+
+               
+
+            </div>}
+
+            
 
             <h2 className="textoGanador" style={CambiarColorTexto()}> Turno jugador {jugador} </h2>
+
+            <p> {partidasGanadas}</p>
 
             <button className="restartBtt" onClick={Restart}> RESTART </button>
 
@@ -140,8 +188,8 @@ function Tateti() {
 
                 )}
 
-
             </div>
+
 
             <Snackbar anchorOrigin={{ vertical, horizontal }} autoHideDuration={2000} open={open} onClose={handleClose} key={vertical + horizontal}>
                 <Alert severity="warning" onClose={handleClose}>{message}

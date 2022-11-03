@@ -15,16 +15,7 @@ function Index() {
             <div className={["glow", "block"].join(" ")}>
             </div>
             <div className="menu">
-                <Link to="Tateti">
-                    <a className="menu_button">
-                    <span id="span1"></span>
-                    <span id="span2"></span>
-                    <span id="span3"></span>
-                    <span id="span4"></span>
-                    PLAY GAME
-                    </a>
-                </Link>
-                <Link to="Review">
+                <Link to="tateti">
                     <a className="menu_button">
                     <span id="span1"></span>
                     <span id="span2"></span>
