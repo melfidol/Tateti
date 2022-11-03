@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import Casilla from "../../components/Casilla/Casilla";
 import "./tateti.css"
 
 
@@ -23,19 +25,46 @@ function Tateti() {
         nuevasPosiciones[index] = jugador
         setPosiciones(nuevasPosiciones)
         setJugador(jugador % 2+1)
+        
         }
     }
+
+    function CambiarColorTexto(){
+        if (jugador ==1){
+            return({color:"#458bc4"})
+        }
+        else {
+            return({color:"rgb(196, 69, 154)"})
+
+        }
+    }
+
+    function Restart(){
+        setPosiciones([0,0,0,0,0,0,0,0,0])
+        setJugador(jugador % 2+1)
+
+    } //nk
+
+    /* <h1> Tablero gg</h1>  */
 
     return (
         <div id="aplicacion">
 
 
-            <h1> Tablero gg</h1>
-            <h2 className="textoGanador"> Jugador 1 Ha ganado</h2>
+        
+
+            
+            <h2 className="textoGanador" style={CambiarColorTexto()}> Turno jugador {jugador} </h2>
+
+            <button className="restartBtt" onClick={Restart}> RESTART </button>
+
+    
+           
+
 
             <div className="tablero">
                 {posiciones.map((posicion, index) =>
-                    <button className={"Tbutton jugador" + posicion } onClick={e=> CambiarPosicion(index)} >{posicion}-{index}</button>
+                    <Casilla handleClick={() => CambiarPosicion(index)} posicion={posicion} index={index}/>
                 )}
 
             </div>

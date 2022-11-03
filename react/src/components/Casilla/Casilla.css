@@ -1,0 +1,45 @@
+.Tbutton {
+    width: 170px;
+    height: 170px;
+    max-width: 33.33%;
+
+    border-radius: 5px;
+    border: 2px solid #616ba7;
+
+    text-overflow: hidden;
+    font-display: none;
+
+    
+
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.Tbutton:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+    background-color: #616ba7; /* Green */
+    color: white;
+}
+
+.Tbutton:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.jugador1 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/mileiCyrus.jpg);
+    background-position:center;
+    
+}
+
+.jugador2 {
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/ajolote.jpg) ;
+    background-size:cover;
+    background-position:center;
+
+}
