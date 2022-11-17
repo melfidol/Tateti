@@ -44,3 +44,153 @@
     background-position:center;
 
 }
+
+.personaje1 {
+    /* 
+    ajolote
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/ajolote.jpg) ;
+    background-size:cover;
+    background-position:center;
+
+}
+.personaje2 {
+    /* 
+    arete
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/arete.jpg) ;
+    background-size:cover;
+    background-position:center;
+
+}
+.personaje3 {
+    /* 
+    messi
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/messi.jpg) ;
+    background-size:cover;
+    background-position:center;
+
+}
+.personaje4 {
+    /* 
+    milei
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/mileiCyrus.jpg) ;
+    background-size:cover;
+    background-position:center;
+
+}
+.personaje5 {
+    /* 
+    britney
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/britney.jpg) ;
+    background-size:cover;
+    background-position:center;
+
+}
+.personaje6 {
+    /* 
+    hada
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/hada.jpeg) ;
+    background-size:cover;
+    background-position:center;
+
+}
+.personaje7 {
+    /* 
+    kitty
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/kitty.jpg) ;
+    background-size:cover;
+    background-position:center;
+
+}
+.personaje8 {
+    /* 
+    messi_cursed
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/messi_cursed.jpg) ;
+    background-size:cover;
+    background-position:center;
+}
+.personaje9 {
+    /* 
+    parkour
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/parkour.jpeg) ;
+    background-size:cover;
+    background-position:center;
+
+}
+.personaje10 {
+    /* 
+    otaku
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/otaku.jpeg) ;
+    background-size:cover;
+    background-position:center;
+
+}
+.personaje11 {
+    /* 
+    messi_chiquito
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/messi_chiquito.jpeg) ;
+    background-size:cover;
+    background-position:center;
+
+}
+.personaje12 {
+    /* 
+    holder
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/holder.jpeg) ;
+    background-size:cover;
+    background-position:center;
+
+}
+.personaje13 {
+    /* 
+    ricky
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/ricky.jpeg) ;
+    background-size:cover;
+    background-position:center;
+
+}
+.personaje14 {
+    /* 
+    yoda
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/yoda.jpeg) ;
+    background-size:cover;
+    background-position:center;
+
+}
+.personaje15 {
+    /* 
+    delfi_emo
+    */
+    background-repeat: no-repeat;
+    background-image: url(http://localhost:3000/source/personajes/quien.jpeg) ;
+    background-size:cover;
+    background-position:center;
+
+}

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Link } from 'react-router-dom'
 import Titlebar from '../../components/Titlebar'
 import './inicio.css'
@@ -31,7 +32,7 @@ function Index() {
                     <span id="span4"></span>
                     HOW TO PLAY
                 </a>
-                <a id="quit_btn" href="" onClick={e => ipcRenderer.send('close')} className="menu_button">
+                <a id="quit_btn" href="" onClick={() => ipcRenderer.send('close')} className="menu_button">
                     <span id="span1"></span>
                     <span id="span2"></span>
                     <span id="span3"></span>

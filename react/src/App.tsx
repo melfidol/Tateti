@@ -4,6 +4,7 @@ import Titlebar from './components/Titlebar';
 import Index from './views/Index/inicio';
 import Tateti from './views/Tateti/Tateti';
 import Review from './components/Review';
+import Personaje from './views/Personaje/Personaje';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/tateti" element={<Tateti />} />
-          <Route path="/review" element={<Review/>}/>
+          <Route path="/personaje" element={<Personaje />} />
           
         </Routes>
 

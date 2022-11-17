@@ -5,10 +5,10 @@ interface props {
     posicion: number
     index: number
 }
-function Casilla({handleClick, posicion, index}:props ) {
+function Casilla({ handleClick, posicion, index}:props ) {
     
     return (
-        <button className={"Tbutton jugador" + posicion } onClick={handleClick} ></button>
+        <button className={"Tbutton "+  posicion } onClick={handleClick} ></button>
 
     )
 }
