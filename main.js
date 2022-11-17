@@ -3,7 +3,7 @@ const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 require("./database")
 
-const { GoalsFind, GoalsDelete } = require("./database");
+const { GoalsFind, GoalsDelete, GoalsUpdate, GoalsFindOne, CompletarObjetivo } = require("./database");
 
 
 function createWindow () {
@@ -68,10 +68,6 @@ function createWindow () {
 }
 
   
-
-
-
-
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
@@ -83,7 +79,6 @@ app.whenReady().then(() => {
     // dock icon is clicked and there are no other windows open.
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
-TaT
 })
 
 // Quit when all windows are closed, except on macOS. There, it's common
@@ -107,12 +102,45 @@ ipcMain.on("getGoals", (e) => {
 ipcMain.on("delete-goal", (e, idGoal) => {
   console.log("BORRAR: ", idGoal);
 
-  GoalDelete(idGoal).then(r => {
+  GoalsDelete(idGoal).then(r => {
     console.log(r)
-    console.log("CORRECTO")
+    console.log("Objetivo eliminado correctamente")
 
     e.reply("deleted-goal", idGoal)
   }).catch(e => {
     console.log("ERROR: ", e)
   })
 })
+
+ipcMain.on('update-goal', (e, goalId, goal) =>{
+  GoalsUpdate(goalId, goal).then(r => {
+    console.log("Objetivo actualizado: ", r)
+    e.reply("updated-goal", goalId)
+  }).catch(e => {
+    console.log("ERROR: ", e)
+  })
+})
+
+ipcMain.on('completar-objetivo', (e, title) =>{
+  GoalsFindOne(title).then(r => {
+    console.log(r)
+    CompletarObjetivo(r._id).then(goal => {
+      console.log("Objetivo completado: ", goal)
+      e.reply("objetivo-completado", goal)
+    }).catch(e => {
+      console.log("ERROR: ", e)
+    })
+  }).catch(e => {
+    console.log("ERROR: ", e)
+  })
+})
+
+/*ipcMain.on('find-one-goal', (e, title) =>{
+  GoalsFindOne(title).then(r => {
+    console.log(r)
+
+    e.reply("goal-found", r.map(goal => goal._doc))
+  }).catch(e => {
+    console.log("ERROR: ", e)
+  })
+})*/
