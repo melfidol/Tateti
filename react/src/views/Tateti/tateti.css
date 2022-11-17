@@ -14,10 +14,14 @@ body{
     width: 0px;
 }
 
-h1, h2{
+h1, h2, h3{
     text-align: center;
     font-size: 3em;
     font-family: 'Press Start 2P';
+}
+
+h3{
+    font-size: 1em;
 }
 
 
@@ -40,6 +44,44 @@ h1, h2{
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
+}
+
+.barraTitulo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 150px;
+    margin: auto;
+    background-color: rgb(102, 18, 161);
+}
+
+.displayContador{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin-top: 140px;
+    
+}
+
+.numContador{
+    height:100px;
+    width: 100px;
+    background-color: rgb(255, 142, 4);
+    margin-top: 15px;
+
+}
+
+p{
+    display:flex;
+    text-align: center;
+    justify-content: space-evenly;
+    font-family: 'Press Start 2P';
+    font-size: 2em;
+
 }
 
 .restartBtt{
@@ -91,11 +133,12 @@ h1, h2{
     left:0;
     right:0;
 
-    background-image: url(http://localhost:3000/source/Gbailando.gif);
+    background-image: url(http://localhost:3000/source/singleLadies.gif);
     
    
     background-size: cover;
     background-repeat: no-repeat;
+    background-position:center;
 
 
 }
@@ -103,9 +146,160 @@ h1, h2{
     display: none;
 }
 
+.textoVictoria{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Press Start 2P';
+    position: relative;
 
-audio{
-    
+    animation: mymove 5s infinite;
+    animation-direction: alternate;
+   
 }
 
+@keyframes mymove {
+    0%   {color: rgb(196, 0, 167); left: 0px; top: 0px; font-size: 1em;}
+  25%  {color: rgba(242, 242, 4, 0.674); left: 200px; top: 0px; font-size: 2em;}
+  50%  {color: rgb(13, 13, 203); left: 200px; top: 200px; font-size: 3em;}
+  75%  {color: rgb(13, 176, 157); left: 0px; top: 200px; font-size: 4em;}
+  100% {color: rgb(235, 194, 14); left: 0px; top: 0px; font-size: 5em;}
+}
 
+----------
+.banderines{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.divBanderines{
+  width: 100px;
+  height: 50px;
+  font-weight: bold;
+  position: relative;
+  animation: myB 10s infinite;
+
+}
+
+@keyframes myB {
+    from {top: 0px;}
+    to {top: 500px;}
+}
+
+#b1 {animation-timing-function: linear; left: 10%; background-image:url(http://localhost:3000/source/icon_home.png); 
+     background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center; }
+#b2 {animation-timing-function: ease; left: 30%; background-image:url(http://localhost:3000/source/flag2.png);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center; }
+#b3 {animation-timing-function: ease-in; left: 50%; background-image:url(http://localhost:3000/source/flag3.png);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;}
+#b4 {animation-timing-function: ease-out; left: 70%; background-image:url(http://localhost:3000/source/flag4.png);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;}
+#b5 {animation-timing-function: ease-in-out; left: 90%; background-image:url(http://localhost:3000/source/flag5.png);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;}
+
+
+
+
+
+
+----------
+/*
+  .relativeB{
+    position: relative;
+    width: 100%;
+    height:100%;
+
+  }
+  .burbujas div {
+    background: rgb(46, 141, 185);
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    animation: animarburbujas 4s linear infinite;
+    
+    width: 100%;
+    height:100%;
+    
+  }
+  
+  .burbujas div:nth-child(1) {
+    width: 50px;
+    height: 45px;
+    left: 40px;
+    animation-duration: 4s;
+  }
+  
+  .burbujas div:nth-child(2) {
+    width: 60px;
+    height: 55px;
+    left: 25%;
+    animation-duration: 8s;
+  }
+  
+  .burbujas div:nth-child(3) {
+    width: 30px;
+    height: 27px;
+    left: 40%;
+    animation-duration: 5s;
+  }
+  
+  .burbujas div:nth-child(4) {
+    width: 65px;
+    height: 60px;
+    left: 50%;
+    animation-duration: 10s;
+  }
+  
+  .burbujas div:nth-child(5) {
+    width: 55px;
+    height: 50px;
+    left: 65%;
+    animation-duration: 6.5s;
+  }
+  
+  .burbujas div:nth-child(6) {
+    width: 50px;
+    height: 48px;
+    left: 85%;
+    animation-duration: 9s;
+  }
+  
+  .burbujas div:nth-child(7) {
+    width: 35px;
+    height: 32px;
+    left: 90%;
+    animation-duration: 6s;
+  }
+  
+  @keyframes animarburbujas {
+    0% {
+      width: 0;
+      height: 0;
+    }
+    3% {
+      width: 30px;
+      height: 27px;
+    }
+    50% {
+      margin-left: 20px;
+      opacity: 0.5;
+    }
+    100% {
+      transform: rotate(90deg);
+      bottom: 100vh;
+      background: rgb(27, 143, 197);
+    }
+  }
+
+*/{}
