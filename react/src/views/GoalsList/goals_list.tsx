@@ -7,7 +7,6 @@ const ipcRenderer = window.require("electron").ipcRenderer
 function GoalsList(){
     
 const [goalsList, setGoalsList] = useState<GoalModel[]>([])
-// const [isCompleted, setIsCompleted] = useState(false)
 
   useEffect(() => {
     ipcRenderer.send("getGoals")
@@ -18,8 +17,6 @@ const [goalsList, setGoalsList] = useState<GoalModel[]>([])
     setGoalsList(goals)
   })
 
-// function isComplete(goal: GoalModel){
-// return !!goal.achieved_date}
 
 function isUnlocked(goal:GoalModel){
   if(goal.requirements == 'none'){

@@ -1,14 +1,22 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import './App.css';
-import Goal from './components/Goal/goal_expanded';
+import { useState } from 'react'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import './App.css'
 
-import Titlebar from './components/Titlebar';
-import GoalsList from './views/GoalsList/goals_list';
-import Index from './views/Index/inicio';
-import Tateti from './views/Tateti/Tateti';
-import Review from './components/Review';
+import Titlebar from './components/Titlebar'
+import GoalModel from './models/goalModel'
+import { Backroom1 } from './views/Backroom1/Index'
+import GoalsList from './views/GoalsList/goals_list'
+import Index from './views/Index/inicio'
+import Tateti from './views/Tateti/Tateti'
+
+const ipcRenderer = window.require("electron").ipcRenderer
 
 function App() {
+
+const [objetivos, setObjetivos] = useState<GoalModel[]>([])
+ipcRenderer.on('goal-found', (e: any, goal: GoalModel[]) => {
+  setObjetivos(goal)
+})
   return (
     <BrowserRouter>
       <div className='mainApp'>
@@ -17,9 +25,8 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/tateti" element={<Tateti />} />
           <Route path='/goals' element={<GoalsList/>}/>
-          
+          <Route path='/backroom1' element={<Backroom1/>}/>
         </Routes>
-
       </div>
 
     </BrowserRouter>

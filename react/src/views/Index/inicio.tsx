@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import Title from '../../components/Title'
 import inicio from './inicio.module.css'
 
 const ipcRenderer = window.require("electron").ipcRenderer
@@ -41,8 +40,6 @@ function Index() {
                     QUIT GAME
                 </a>
             </div>
-
-            {/* <audio src="/source/wap.mp3" itemType='mp3' autoPlay loop></audio> */}
         </div>
 
     )

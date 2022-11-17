@@ -6,19 +6,9 @@ console.log("Base de datos conectada")
     console.log("Error en la conexion", error)
 })
 
-const goalSchema = new mongoose.Schema({
-  _id: String,
-  title: {type : String, required:true},
-  description: {type : String, required:true},
-  achieved_date: Date,
-  img_src:String,
-  requirements:{type : String, required:true}
-  }
-  , { _id: true , timestamps:true}
-  );
+const Goal = require('./models/goal_model');
 
 
-const Goal = mongoose.model('goal', goalSchema);
 
 const ids = [];
 for (let index = 0; index < 20; index++) {
@@ -76,8 +66,44 @@ goals.forEach(goal=>goal.save())
   }
 })
 
+function CreateGoal(goal) {
+  return new Promise((resolve, reject) => {
+    let goalx = new Goal({
+      _id: new mongoose.Types.ObjectId(),
+      title: goal.title,
+      description: goal.description,
+      achieved_date: Date,
+      img_src:goal.img_src,
+    })
+
+    goalx.save().then(r => {
+      console.log(goalx.title + " saved.");
+      resolve(goalx)
+    }).catch(error => {
+      reject(error)
+    })
+  })
+}
+
+function UpdateGoal(goal_id, goal){
+  Goal.findByIdAndUpdate(goal_id, goal, {new: true},
+    (err, goal) => {
+        if (err) return res.status(500).send(err)
+        return res.send(goal)})
+}
+
+function CompletarObjetivo(goal_id){
+  return  Goal.findByIdAndUpdate(goal_id, {$set: {achieved_date: new Date()}}, {new: true})
+
+}
+
+
 module.exports = {
-    GoalsFindOne: (title) => Goal.find({title: title}),
+    GoalsFindOne: (title) => Goal.findOne({title: title}),
     GoalsFind: async () => await Goal.find(),
+    GoalsCreate: (goal) => CreateGoal(goal),
+    CreateGoals: (goal) => Goal.create(goal),
+    GoalsUpdate: (id, goal) => UpdateGoal(id, goal),
+    CompletarObjetivo: (id) => CompletarObjetivo(id),
     GoalsDelete: (id) => Goal.collection.deleteOne({ _id: id })
   }
