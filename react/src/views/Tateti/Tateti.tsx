@@ -3,8 +3,6 @@ import Casilla from "../../components/Casilla/Casilla"
 import "./tateti.css"
 import { SnackbarOrigin, Snackbar, Alert } from "@mui/material"
 import React from "react"
-import GoalsList from "../GoalsList/goals_list"
-import GoalModel from '../../models/goalModel';
 import { useNavigate } from "react-router-dom"
 const ipcRenderer = window.require("electron").ipcRenderer
 
@@ -228,7 +226,7 @@ function Tateti() {
 
             <div className="tablero">
                 {posiciones.map((posicion, index) =>
-                    <Casilla handleClick={() => CambiarPosicion(index, { vertical: 'top', horizontal: 'center', })} posicion={posicion} index={index} />
+                    <Casilla handleClick={() => CambiarPosicion(index, { vertical: 'top', horizontal: 'center', })} tipo='personaje' posicion={posicion} index={index} />
 
                 )}
 

@@ -24,7 +24,7 @@ function Index() {
                     PLAY GAME
                     </a>
                 </Link>
-                <Link to="">
+                <Link to="/personaje">
                 <a className={inicio.menu_button}>
                     <span id={inicio['span1']}></span>
                     <span id={inicio['span2']}></span>
