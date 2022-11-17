@@ -161,9 +161,9 @@ p{
 @keyframes mymove {
     0%   {color: rgb(196, 0, 167); left: 0px; top: 0px; font-size: 1em;}
   25%  {color: rgba(242, 242, 4, 0.674); left: 200px; top: 0px; font-size: 2em;}
-  50%  {color: rgb(13, 13, 203); left: 200px; top: 200px; font-size: 3em;}
-  75%  {color: rgb(13, 176, 157); left: 0px; top: 200px; font-size: 4em;}
-  100% {color: rgb(235, 194, 14); left: 0px; top: 0px; font-size: 5em;}
+  50%  {color: rgb(13, 13, 203); left: 200px; top: 450px; font-size: 3em;}
+  75%  {color: rgb(13, 176, 157); left: 0px; top: 450px; font-size: 4em;}
+  100% {color: rgb(235, 194, 14); left: 0px; top: 0px; font-size: 2em;}
 }
 
 ----------
