@@ -1,7 +1,20 @@
 
-h1, h2, h3{
+#aplicacion {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2, h3, h4{
     text-align: center;
     font-family: 'Press Start 2P';
+}
+
+/* para los textos de los botones */
+h4 {
+    font-size: 15px;
+    font-weight: lighter;
+    color: white;
 }
 
 #jugadores {
@@ -50,48 +63,47 @@ h1, h2, h3{
     color:#F5FD08;
 }
 
+#boton_guardar {
+    margin: auto;
+    margin-bottom: 30px;
+    
+    height: 65px;
+    width: 220px;
+}
 
 .saveBtt{
-    height: 40px;
-    width: 200px;
+    background: url(http://localhost:3000/source/botones/save_button.png);
+    background-size: cover;
 
-    margin: auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
 
-    font-size: large;
-    
-    text-align: center;
-    color:#08FD0C;
-    background-color: transparent;
+    border: none;
 
-    padding-left: 55px;
-    margin-bottom: 50px;
+    height: 100%;
+    width: 100%;
 
-
-    border-radius: 8px;
-    border: 3px solid #08FD0C;
-
-    box-shadow: 0 9px rgb(79, 78, 78);
+    padding: 0;
+    margin: auto;
 
     -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-
+    transition-duration: transform 0.4s;
 }
 
 .saveBtt:hover {
-    background-color: #08FD0C; /* Green */
-    color: black;
+    
 }
 
 .saveBtt:active {
-    box-shadow: 0 5px rgb(38, 38, 38);
     transform: translateY(4px);
 }
 
-.tableroP{
-    margin: auto;
-    width: 510px;
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+.saveBtt.disabled {
+    background: url(http://localhost:3000/source/botones/save_button_disabled.png);
+    background-size: cover;
+
+    transform: translateY(0px);
+
 }
+

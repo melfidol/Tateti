@@ -27,7 +27,7 @@ function Titlebar(){
             <Link to="/">
                 <button title='menu' className={[style.botonBarra, style.botonMenu].join(" ")}></button> 
             </Link>
-            <div id="titulobarra" className={style.titulobarra}>TTT</div>
+            <div id="titulobarra" className={style.titulobarra}>TaTeTi</div>
             <div id="botones" className={style.botones}>
                 <button title='minimize' onClick={e => ipcRenderer.send('minimize')} className={[style.botonBarra, style.botonMin].join(" ")}  ></button>
                 <button title={isMaximized ? 'unmaximize' : 'maximize'} onClick={e => ipcRenderer.send('maximizeRestoreApp')} style={{backgroundImage : isMaximized ?  "url('/source/icon_restore.png')" : "url('/source/icon_maximize.png')"}} className={[style.botonBarra, style.botonMax].join(" ")} ></button>
