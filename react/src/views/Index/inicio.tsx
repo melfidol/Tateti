@@ -30,7 +30,7 @@ function Index() {
                     <span id={inicio['span2']}></span>
                     <span id={inicio['span3']}></span>
                     <span id={inicio['span4']}></span>
-                    HOW TO PLAY
+                    SKINS
                 </a>
                 </Link>
                 <a id="quit_btn"onClick={e => ipcRenderer.send('close')} className={inicio.menu_button}>
