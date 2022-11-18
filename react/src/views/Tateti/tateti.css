@@ -80,6 +80,7 @@ p{
     justify-content: space-evenly;
     font-family: 'Press Start 2P';
     font-size: 2em;
+    margin-top: 30px;
 
 }
 
@@ -93,17 +94,19 @@ p{
     font-size: large;
     
     text-align: center;
-    color:#F5FD08;
+    color:#000000;
     background-color: transparent;
 
     padding-left: 55px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    margin-top: 20px;
 
 
     border-radius: 8px;
-    border: 3px solid #F5FD08;
+    border: 3px solid rgb(79, 78, 78);
+    background-color: #F5FD08;
 
-    box-shadow: 0 9px rgb(79, 78, 78);
+    box-shadow: 0 9px rgb(29, 28, 28);
 
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
@@ -112,7 +115,7 @@ p{
 
 
 .restartBtt:hover {
-    background-color: #F5FD08; /* Green */
+    background-color: rgb(255, 142, 4); /* Green */
     color: black;
 }
 

@@ -65,6 +65,7 @@ function Tateti() {
     posiciones.forEach((element: any, index: any) => {
         bandera = element === backroom1[index]
     })
+
     if(bandera){
         ipcRenderer.send('completar-objetivo', 'No way out')
         setState(p => ({ ...p, open: true }))
@@ -207,7 +208,7 @@ function Tateti() {
     return (
         <div id="aplicacion">
 
-{mostrarVictoria && <div className={mostrarVictoria ? "mostrarVictoria" : "noMostrarVictoria"}>
+            {mostrarVictoria && <div className={mostrarVictoria ? "mostrarVictoria" : "noMostrarVictoria"}>
                 Victoria
 
                 <h1 className="textoVictoria">
@@ -244,7 +245,7 @@ function Tateti() {
                 <div className="displayContador">
                     <div> <h3>Jugador 1 </h3> </div>
 
-                    <div className="numContador"><p>{partidasGanadas[0]}</p>  </div>
+                    <div className="numContador"><p>{partidasGanadas[1]}</p>  </div>
 
                 </div>
 
@@ -253,12 +254,11 @@ function Tateti() {
                 <div className="displayContador">
                     <div><h3>Jugador 2 </h3> </div>
 
-                    <div className="numContador"><p>{partidasGanadas[1]}</p>  </div>
+                    <div className="numContador"><p>{partidasGanadas[2]}</p>  </div>
                 </div>
 
-                
-
             </div>
+
 
             <button className="restartBtt" onClick={Restart}> RESTART </button>
 
