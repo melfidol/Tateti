@@ -1,0 +1,21 @@
+.main{
+  height: 100vh;
+  width: auto;
+  background-image: url(http://localhost:3000/source/fondo-goals.gif);
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.title{
+  text-align: center;
+  margin-top: 70px;
+}
+
+.diagram-component {
+    position: absolute;
+    height: 600px;
+    width: 1700px;
+    left: -175px;
+  
+  }

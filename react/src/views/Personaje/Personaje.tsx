@@ -81,7 +81,7 @@ function Personaje() {
             <div className="tablero">
                 {   
                     personajes.map((personaje, index) =>
-                    <Casilla handleClick={() => ElegirPersonaje(personaje)} posicion={personaje} index={index}/>
+                    <Casilla handleClick={() => ElegirPersonaje(personaje)} tipo={'personaje'} posicion={personaje} index={index}/>
                 )}
             </div>
         </div>

@@ -4,7 +4,7 @@ import Casilla from "../../components/Casilla/Casilla";
 import "./tateti.css"
 import { SnackbarOrigin, Snackbar, Alert } from "@mui/material";
 import React from "react";
-import { Gif } from "@mui/icons-material";
+
 
 
 //  hacer css de las posiciones 0 (vacias) 1 y 2 para que se vean con las fichas puestasq
@@ -219,7 +219,7 @@ function Tateti() {
 
             <div className="tablero">
                 {posiciones.map((posicion, index) =>
-                    <Casilla handleClick={() => CambiarPosicion(index, { vertical: 'top', horizontal: 'center', })} posicion={posicion} index={index} />
+                    <Casilla handleClick={() => CambiarPosicion(index, { vertical: 'top', horizontal: 'center', })} tipo='personaje' posicion={posicion} index={index} />
 
                 )}
 

@@ -3,20 +3,16 @@
     src: url(http://localhost:3000/source/Retrolight.ttf);
   }
   
-  
-  
+
   .main {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: grid;
-    grid-template-columns: 30% 40% 30%;
+    grid-template-columns: 35% 30% 35%;
     grid-template-rows: 25% 75%;
-    background: url(http://localhost:3000/source/fondo.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
   }
-  
+   
   .span_container {
     position: relative;
     grid-column: 1/-1;
@@ -24,6 +20,7 @@
     margin: auto;
     width: auto;
     height: auto;
+    padding-top: 30px;
   }
   
   .span_container span {
@@ -39,7 +36,7 @@
   .span_container span::before {
     content: var(--l);
     position: absolute;
-    transform: scale(1.1);
+    transform: scale(1.2);
     filter: blur(20px);
   }
   
@@ -60,34 +57,34 @@
   .span_container span:nth-child(3) {
     color: #F5FD08;
   }
-  
+
   .menu {
     grid-column: 2;
     grid-row: 2;
-    height: 80%;
+    height: 83%;
     width: 100%;
     position: relative;
-    border-radius: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background: none;
+    background-image: url(http://localhost:3000/source/vidrio.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  
+
   .block {
     grid-column: 2;
     grid-row: 2;
     position: relative;
     margin: 10%, 0;
-    width: auto;
-    height: 80%;
-    background-color: rgba(0, 0, 0, 0);
-  
+    width: 100%;
+    height: 83%;
+    background-color: #2f7ac0;
   }
   
   .glow::before,
-  .glow::after {
+  .glow::after{
     content: "";
     position: absolute;
     left: -2px;
@@ -121,7 +118,7 @@
     }
   }
   
-  .glow::after {
+  .glow::after{
     filter: blur(40px);
     opacity: .5;
   }
@@ -132,13 +129,14 @@
     display: inline-block;
     padding: 15px 30px;
     color: rgb(255, 255, 255);
-    letter-spacing: 2px;
-    word-spacing: -5px;
-    font-family: Retrolight;
+    font-weight: bold;
+    font-family: 'Press Start 2P';
     font-size: 30px;
     text-decoration: none;
     overflow: hidden;
     transition: 0.2s;
+    cursor: pointer;
+    text-shadow: 1px 1px 10px black;
   
   }
   
@@ -214,4 +212,32 @@
     top: -100%;
     transition: 0.8s;
     transition-delay: 0.6s;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .main {
+      width: 100%;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 27.5% 45% 27.5%;
+      grid-template-rows: 25% 75%;
+      background: url(http://localhost:3000/source/fondo.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-width:650px) {
+    .main {
+      width: 100%;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 20% 60% 20%;
+      grid-template-rows: 25% 75%;
+      background: url(http://localhost:3000/source/fondo.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
   }
