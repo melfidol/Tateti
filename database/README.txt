@@ -2,12 +2,21 @@
 
 En este directorio se aplicará una base de datos donde se definirán modelos y entidades y cómo estarán comformados.
 
-## Puntajes
-id_jugador 
-puntaje (int), puntos que acumula el jugador desde que crea su usuario 
+# Funciones 
 
-## Jugadores
-id_jugador, se asigna cuando el jugador crea su usuario
-nombre, el jugador lo elige cuando crea su usuario
+CreateGoal 
+    Esta función se encargará de crear un objetivo en la base de datos junto a sus atributos
+
+UpdateGoal
+    Esta función se encargará de actualizar el objetivo
+
+CompletarObjetivo
+    Esta función se encarga de marcar como completado el objetivo
+
+# Constantes
+
+Goal 
+    Esta constante va creando objetivos a lo largo que se avanza en el juego
+
 
 

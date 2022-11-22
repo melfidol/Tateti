@@ -1,3 +1,5 @@
+## Actualizado 21/11/22
+
 # Tateti
 Nuestro proyecto se basa en un juego de Tateti que ofrece distintas posibilidades de experiencias de usuario.
 
@@ -30,15 +32,11 @@ Nuestro proyecto se basa en un juego de Tateti que ofrece distintas posibilidade
 
 ✔️ Trabajos de base de datos (Dolfina)
 
-## Tareas a Realizar 
-❌ Añadir RWD
+✔️ Profundización en la base de datos (Dolfina)
 
-❌ Corregir estilos
+✔️ Funciones principales del juego (Dolfina, Delfina)
 
-❌ Añadir archivos ReadMe en directorios restantes
+✔️ Elección de personajes (Julieta)
 
-❌ Profundizar en la base de datos
 
-❌ Funciones principales del juego
-
-❌ Almacenar y devolver datos que sirvan en el juego
+## Se da como finalizado el proyecto 
