@@ -65,6 +65,7 @@ function Tateti() {
     posiciones.forEach((element: any, index: any) => {
         bandera = element === backroom1[index]
     })
+
     if(bandera){
         ipcRenderer.send('completar-objetivo', 'No way out')
         setState(p => ({ ...p, open: true }))
@@ -210,15 +211,53 @@ function Tateti() {
             {mostrarVictoria && <div className={mostrarVictoria ? "mostrarVictoria" : "noMostrarVictoria"}>
                 Victoria
 
-                <div id="video"> 
+                <h1 className="textoVictoria">
+                    Te ganasta una bondiolitaa
+                </h1>
+
+                {/*<div className="relativeB"> <div className="burbujas"/> </div>*/}
+
+                <div className="banderines">
+                    <div className="divBanderines" id="b1"> </div>
+                    <div className="divBanderines" id="b2"></div>
+                    <div className="divBanderines" id="b3"></div>
+                    <div className="divBanderines" id="b4"></div>
+                    <div className="divBanderines" id="b5"></div> 
+                </div>
+                
+
+                <div id="video"> </div>
+
+                <div id="animacion" ></div> 
+        
+                <audio src="/source/boca2.mp3" itemType='mp3' autoPlay></audio>
+
+                
+
+            </div>
+            }
+
+            
+
+            
+
+            <div className="barraTitulo">
+                <div className="displayContador">
+                    <div> <h3>Jugador 1 </h3> </div>
+
+                    <div className="numContador"><p>{partidasGanadas[1]}</p>  </div>
 
                 </div>
-            
-                <audio src="/source/boca.mp3" itemType='mp3' autoPlay></audio>
 
-            </div>}
+                <h2 className="textoGanador" style={CambiarColorTexto()}> Turno jugador {jugador} </h2>
 
-            <h2 className="textoGanador" style={CambiarColorTexto()}> Turno jugador {jugador} </h2>
+                <div className="displayContador">
+                    <div><h3>Jugador 2 </h3> </div>
+
+                    <div className="numContador"><p>{partidasGanadas[2]}</p>  </div>
+                </div>
+
+            </div>
 
 
             <button className="restartBtt" onClick={Restart}> RESTART </button>

@@ -31,8 +31,9 @@
 .jugador1 {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(http://localhost:3000/source/mileiCyrus.jpg);
     background-position:center;
+    background-image: url(http://localhost:3000/source/mileiCyrus.jpg);
+    
     
 }
 

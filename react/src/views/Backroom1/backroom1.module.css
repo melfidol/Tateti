@@ -1,0 +1,7 @@
+.main{
+    height: 100vh;
+    padding: 0px;
+    background: url(http://localhost:3000/source/backroom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

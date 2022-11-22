@@ -3,6 +3,7 @@
     margin: 0;
     width: 100%;
     height: 100%;
+    margin-top: 30px;
 }
 
 h1, h2, h3, h4{
@@ -61,11 +62,13 @@ h4 {
 .textoElige{
     font-size: 2em;
     color:#F5FD08;
+    margin-top: 10px;
 }
 
 #boton_guardar {
     margin: auto;
     margin-bottom: 30px;
+    margin-top: 20px;
     
     height: 65px;
     width: 220px;
